@@ -274,7 +274,7 @@ class Checkoutpagein extends Component {
           },
         ],
       });
-      this.setState( travellerCount++ );
+      //this.state.travellerCount++;
       
     }
     setTimeout(() => {
