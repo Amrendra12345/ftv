@@ -53,11 +53,10 @@ class Checkoutpagein extends Component {
   }
   onApply = async () => {
     const formdata = new FormData();
-    const { country_ext, page_url2 } = this.props;
-   
+    const { country_ext, page_url2 } = this.props;   
     formdata.append("countryCode", this.props.checkoutpage[0].currency_icon);
     formdata.append("couponCode", this.state.Coupon_code);
- 
+    
     
     const requestOptions = {
       method: "POST",
@@ -141,11 +140,11 @@ class Checkoutpagein extends Component {
       `https://cms.fasttrackvisa.com/api/${country_ext}/checkout/${page_url2}`
     );
   
-    console.log("country_ext", country_ext);
-    console.log("page_url2", page_url2);
-    console.log("response", res);
+    // console.log("country_ext", country_ext);
+    // console.log("page_url2", page_url2);
+   // console.log("response", res);
     const checkoutpage = await res.json();
-    console.log("checkout", checkoutpage);
+     console.log("checkout new 00000000000", checkoutpage);
     if (res.status === 200) {
       const apistatus = res.status;
       return {
@@ -274,8 +273,7 @@ class Checkoutpagein extends Component {
           },
         ],
       });
-      //this.state.travellerCount++;
-      
+      this.state.travellerCount++;
     }
     setTimeout(() => {
       this.setState({ showAlert: false });
@@ -436,7 +434,7 @@ class Checkoutpagein extends Component {
           } else {
             var coupon_code = "";
             var discount_price = "";
-            total_amount = this.props.checkoutpage[0].price * 100;
+            total_amount = this.props.checkoutpage[0].price;
             var total_amount_vp = this.props.checkoutpage[0].price;
           }
           {console.log("total",total_amount)}
@@ -504,8 +502,8 @@ class Checkoutpagein extends Component {
                     ? userEmail
                     : this.state.traveler_info[0].Email,
               };
-              {console.log("amount",propPayentData.finalAmount)}
-              const finalAmount = propPayentData.finalAmount > 10000 ? propPayentData.finalAmount : `${propPayentData.finalAmount}00`
+              {console.log("amount", propPayentData.finalAmount)}
+              const finalAmount = propPayentData.finalAmount * 100
               fetch("/api/create-payment-intent", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
