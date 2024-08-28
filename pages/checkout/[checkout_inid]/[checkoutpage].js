@@ -273,7 +273,7 @@ class Checkoutpagein extends Component {
           },
         ],
       });
-      this.state.travellerCount++;
+     // this.state.travellerCount++;
     }
     setTimeout(() => {
       this.setState({ showAlert: false });
