@@ -2771,68 +2771,67 @@ a {
 }
 
 .slink_ul {
-    margin: 0;
-    padding: 0
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;    
 }
 
 .slink_li {
-    list-style: none;
-    float: left
-}
-
-.slink {
-    float: left;
-    padding: 0 10px 0 0
-}
-
-.slink .fa {
+    list-style: none;    
     width: 34px;
     height: 34px;
     border-radius: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
     background: #dee3e6;
-    color: #5a7184
+    color: #5a7184;
 }
 
-.slink:hover i.fa-instagram {
-    color: #fff;
-    background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)
-}
 
-.slink:hover i.fa-facebook {
+.slink_li:hover{
+    a{
+        svg{
+            color: #fff
+        }
+    }
+}
+.slink_li:nth-child(1):hover{
     background: #3c58a1;
-    color: #fff
 }
 
-.slink:hover i.fa-twitter {
-    background: #2aa9e0;
-    color: #fff
+.slink_li:nth-child(2):hover {
+    background: #2aa9e0;    
 }
 
-.slink:hover i.fa-linkedin {
+.slink_li:nth-child(3):hover {
     background: #0e7bbc;
-    color: #fff
 }
 
-.slink:hover i.fa-pinterest {
-    background: #c61118;
-    color: #fff
+.slink_li:nth-child(4):hover{
+    background: #f09433;
+        background: -moz-linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -webkit-linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)
 }
 
-.slink:hover i.fa-youtube {
-    background: #cd201f;
-    color: #fff
+.slink_li:nth-child(5):hover {
+    background: #cd201f;    
 }
 
 .footer-bottom {
     padding: 15px 0
 }
-
+.phoneNumber{
+    padding: 2px 0;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #010032;
+    font-weight: 600;
+}
 .footer-address img {
     margin: 3px 4px
 }
@@ -2842,7 +2841,15 @@ a {
     padding: 24px 0;
     background: #ddd
 }
-
+.copyRight {
+    padding: 10px 0;
+    background-color: #d9d9d9;
+    p{
+        text-align: center;
+        color: #000;
+        font-weight: 600;
+    }
+}
 .footer-info {
     text-align: center;
     font-size: 13px;

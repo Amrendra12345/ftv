@@ -13,7 +13,7 @@ export default function Visa(props) {
   return (
     <>
       <Head>
-          <title>{`Apply for ${page_url} Visa Online | Fast Track Visa `}</title>
+          <title>{`Apply for ${page_url} Online | Fast Track Visa `}</title>
           <meta name="description" content={`Apply for ${page_url} hassle free online. We offer quick processing and expert assistance. Start your  visa application today!`} />
           <link rel="alternate" href='https://fasttrackvisa.com' hreflang={`locale`}/>
       </Head>

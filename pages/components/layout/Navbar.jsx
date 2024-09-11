@@ -51,7 +51,7 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
-    // console.log('test', session?.user.email)
+     console.log('test', session)
     if (localStorage.getItem('loginDetails') !== null) {
       var loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
       if (loginDetails.email !== '' && loginDetails.email !== null && loginDetails.email !== undefined) {
@@ -66,7 +66,7 @@ const Navbar = (props) => {
 
 
     axios.get('https://cms.fasttrackvisa.com/api' + (locale === '' ? '' : '/' + locale) + '/staticcontent').then(res => {
-      // console.log(res)
+     
       if (res.status === 200) {
         localStorage.setItem('staticContent', JSON.stringify(res.data));
 
@@ -121,10 +121,9 @@ const Navbar = (props) => {
 
   const isCheckoutPage = (status) => {
     if (userName === null || userName === undefined || userName === '') {
-      //const url = pathname.split('/');
-      console.log(pathname)
+      const url = pathname.split('/');      
       
-      var checkOut = pathname == '/checkout' || pathname == '/my-profile' || pathname == '/success';
+      var checkOut = url.find(u => u == 'checkout' || u == 'my-profile' || u == 'success');       
       // console.log(userName,status, checkOut, (status && checkOut), (!status && !checkOut))
       if (status && checkOut && session?.user.email != '') {
         setShow(true);
