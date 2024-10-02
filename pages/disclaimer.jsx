@@ -1,11 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
+
 import { Container } from 'react-bootstrap'
-export default function disclaimer() {   
+export default function disclaimer(props) {   
+ 
   return (
     <>
      <Head>
-        <title>Disclaimer</title>
+        <title>Disclaimer | Fast track visa</title>
+        <link rel="canonical" href={`https://fasttrackvisa.com/${props.country_ext}/disclaimer `}/>
+        <meta name="description" content={`Disclaimer Fast Track Visa at fasttrackvisa.com for assistance with visas, e-visas, flight bookings, hotel reservations, and a variety and holiday packages.`} />
      </Head>
       <div className="checkout_banner">
          <Container>
@@ -31,4 +36,10 @@ export default function disclaimer() {
       </section>
     </>
   )
+}
+export async function getServerSideProps(ctx){
+  const country_ext = ctx.locale;
+   return{
+     props: {country_ext}
+   }
 }

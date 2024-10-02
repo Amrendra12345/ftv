@@ -77,7 +77,7 @@ const Widget_v = (props) => {
   }
 
   function GetEvisa() {
-    console.log(originv)
+   // console.log(originv)
     var Selecteddestination = destination;
     if (Selecteddestination !== null && Selecteddestination !== undefined && Selecteddestination !== '') {
       var newData = '/' + (props.ce_name == '' ? '' : props.ce_name + '/') + Selecteddestination.toLowerCase() + '-visa';

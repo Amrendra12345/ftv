@@ -6,12 +6,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LazyLoad from 'react-lazy-load';
+import { useRouter } from 'next/router';
 // import Nav from '../../../pages/components/Nav';
 // import Footer from '../../../pages/components/Footer';
 
 
 const My_transactions_in = () => {
-	const {locale} = useState();
+	const {locale} = useRouter()
 	const [c_ext, setcExt] = useState('');
 	const [activeClass, setActiveClass] = useState('hsticky');
 
@@ -39,7 +40,7 @@ const My_transactions_in = () => {
 			<Container>
 			<ol className="breadcrumb pl-0 bg-white">
 					<li className="breadcrumb-item"><Link href={'/'}> Home	</Link></li>
-					<li className="breadcrumb-item"><Link href={'/my-profile'} locale={locale}>My Profile </Link></li>
+					<li className="breadcrumb-item"><Link href={'/my-profile'}>My Profile </Link></li>
 					<li className="breadcrumb-item active" aria-current="page"> My Transactions </li>
 				</ol>
 

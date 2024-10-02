@@ -9,9 +9,10 @@ import LazyLoad from 'react-lazy-load';
 // import Nav from '../../pages/../components/Nav';
 // import Footer from '../../pages/../components/Footer';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 export default function ChangePassword() {
-
+    const {locale} = useRouter()
 	const [c_ext, setcExt] = useState('');
 	const [oldPassword, setOldPassword] = useState('');
 	const [newPassword, setNewPassword] = useState('');
@@ -40,7 +41,7 @@ export default function ChangePassword() {
 		data.append('newpassword', newPassword);
 
 		axios.post(`https://cms.fasttrackvisa.com/api/${c_ext}/change-password`, data).then((res) => {
-			console.log(res);
+			//console.log(res);
 		}).catch((ex) => console.error("Update Password", ex), setError('Unable to change password'))
 	};
 
@@ -78,9 +79,9 @@ export default function ChangePassword() {
 					<Row>
 						<Col sm={12} md={3} lg={3}>
 							<ul className='profile_ul'>
-								<li><Link href={'/' + c_ext + '/my-profile/my-transactions'}><i className='fa fa-list'></i> My Transactions </Link></li>
-								<li><Link href={'/' + c_ext + '/my-profile/change-password'}><i className='fa fa-key'></i> Change Password </Link></li>
-								<li><Link href={'/' + c_ext + '/my-profile'}><i className='fa fa-user'></i> Update Profile </Link></li>
+								<li><Link href={'/' + locale + '/my-profile/my-transactions'}><i className='fa fa-list'></i> My Transactions </Link></li>
+								<li><Link href={'/' + locale + '/my-profile/change-password'}><i className='fa fa-key'></i> Change Password </Link></li>
+								<li><Link href={'/' + locale + '/my-profile'}><i className='fa fa-user'></i> Update Profile </Link></li>
 							</ul>
 						</Col>
 						<Col sm={12} md={9} lg={9}>

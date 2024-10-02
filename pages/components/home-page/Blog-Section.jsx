@@ -44,7 +44,8 @@ export default function BlogSection(props) {
                   <figure>
                     <Image
                       alt={'blog user'}
-                      src={"https://ik.imagekit.io/vs4gypuhi/" + blog_arr.image}
+                      src={'/img/blog1.png'}
+                      // src={"https://ik.imagekit.io/vs4gypuhi/" + blog_arr.image}
                       fill
                       sizes='(max-width: 768px) 50vw, 30vw'
                     />

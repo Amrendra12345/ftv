@@ -1,15 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 export default function Blog_page(props) {
-  console.log( props.Blog_page)
+  const {local} = useRouter();
   return (
     <>
      <Head>
-       <title>Blogs</title>
+       <title>Blog | Fast Track Visa </title>
+       <meta name="description" content={`If you’ve arrived here, we share a common passion: a deep love for travel. Whether you're seeking inspiration, planning tips for your next holiday, or simply an engaging read, we've got you covered.`} />
+       <link rel="canonical" href={`https://fasttrackvisa.com/${props.country_ext}/blog`}/>
      </Head>
     <section className="blog_page">
       <div className="checkout_banner">
@@ -29,15 +32,26 @@ export default function Blog_page(props) {
           </ol>
           
           <Row className="mt-5">
-            {props.Blog_page.blog_arr.map(blog_arr =>
+            {props.Blog_page.blog_arr.map((blog_arr, i) =>
               <Col sm={12} md={4} lg={4} key={blog_arr.id}>                
                 <div className="blog-boxes" title={blog_arr.title}>                  
                   <Link href={"/blog/" + blog_arr.blogtitle}>
                     <div className="img-content">
                       <div className="img-thum">
+                        
                       <Image
                         alt={blog_arr.title}
-                        src={`https://ik.imagekit.io/vs4gypuhi/${blog_arr.image}`}
+                        src={ 
+                          i == 0 ? '/img/blog1.png' :
+                          i == 1 ? '/img/blog2.png' :
+                          i== 2 ? '/img/blog2.png' :''
+
+
+                        }
+
+
+
+                        // src={`https://ik.imagekit.io/vs4gypuhi/${blog_arr.image}`}
                         sizes="(max-width:750px) 50vw, 20wv"
                         fill style={{
                           objectFit: 'cover', // cover, contain, none
@@ -97,6 +111,7 @@ export default function Blog_page(props) {
 }
 export const getServerSideProps = async(cxt)=>{
   const pageurl2 = cxt.query.page; 
+  const country_ext = cxt.locale;
   const res = await fetch(`https://cms.fasttrackvisa.com/api/blogs${(pageurl2 === undefined ? '' : '?page=' + pageurl2)}`);
   if (!res.ok){
     throw new Error('Failed to fetch data')
@@ -104,6 +119,6 @@ export const getServerSideProps = async(cxt)=>{
   const Blog_page = await res.json()
   console.log(Blog_page)
   return{
-     props: {Blog_page}
+     props: {Blog_page, country_ext}
   }
 } 

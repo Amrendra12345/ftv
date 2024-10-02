@@ -68,6 +68,17 @@
     margin-bottom: 0;
 }
 
+.faq_para{
+    font-size: 14px;
+    color: #707070;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+.faq{
+    background-color: #f9f9f9;
+    padding: 16px 5px 10px;
+}
+
 .thumbnail{
    .blogBox{
     display: flex;
@@ -148,7 +159,7 @@
         background-color: #ffffff;    
         .img-thum{
             height: 260px;
-            width: 350px;
+            width: 385px;
             position: relative;
             background-color: #050536;
             border-top-left-radius: 4px;

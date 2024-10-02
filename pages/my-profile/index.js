@@ -77,14 +77,14 @@ const My_profile = () => {
 		data.append('marital_status', marital_status);
 		data.append('number_of_kids', number_of_kids);
 		axios.post(`https://cms.fasttrackvisa.com/api/${locale}/updateprofile`, data).then((res) => {
-			console.log(res);
+			//console.log(res);
 		}).catch((ex) => console.error("Update Profile", ex))
 	}
 
 	function calculateAge(birthday) { // birthday is a date
 		var ageDifMs = Date.now() - new Date(birthday).getTime();
 		var ageDate = new Date(ageDifMs); // miliseconds from epoch
-		console.log(Math.abs(ageDate.getUTCFullYear() - 1970))
+		//console.log(Math.abs(ageDate.getUTCFullYear() - 1970))
 		return Math.abs(ageDate.getUTCFullYear() - 1970);
 	}
 

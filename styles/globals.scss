@@ -795,7 +795,7 @@ p {
 }
 
 .testimonials-sec {
-    background-color: #fff;
+    background-color: #f6f6f6;
     padding: 50px 0
 }
 
@@ -803,6 +803,8 @@ p {
     position: relative;
     border: 1px solid #ddd;
     box-shadow: 2px 4px 6px #ddd;
+    background-color: #fff;
+    min-height: 135px;
     padding: 20px;
     border-radius: 4px;
     text-align: center;

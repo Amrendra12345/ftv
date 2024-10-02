@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import LazyLoad from 'react-lazy-load';
+import Head from 'next/head'
 // import Nav from '../pages/components/Nav';
 // import Footer from '../pages/components/Footer';
 class Sitemap extends Component {
@@ -18,13 +19,13 @@ class Sitemap extends Component {
 
     static async getInitialProps(context) {
         const country_ext = context.locale
-        console.log(country_ext)
+        
         const res = await fetch(`https://cms.fasttrackvisa.com/api/homelisting`);
         if (res.status === 200) {
             const sitemap = await res.json()
             const apistatus = res.status;
             return {
-                sitemap, apistatus
+                sitemap, apistatus,country_ext
             }
         }
         else {
@@ -33,7 +34,7 @@ class Sitemap extends Component {
             }
         }
         const resd = await fetch(`https://cms.fasttrackvisa.com/api/${country_ext}/homelisting`);
-        console.log(resd)
+        //console.log(resd)
         if (resd.status === 200) {
             const denymicsitemap = await resd.json()
             const apistatus = resd.status;
@@ -73,6 +74,11 @@ class Sitemap extends Component {
         return (
            
             <>
+            <Head>
+                <title>Sitemap | Fast Track Visa   </title>
+                <meta name="description" content={``} />
+                <link rel="canonical" href={`https://fasttrackvisa.com/${this.props.country_ext}/sitemap`}/>
+            </Head>
                 <div className="Home-page">
                     {/* <header className={'App-header' + ` ${this.state.activeClass}`}>
                         <Nav ce_name={''} lob_name="home_page" meta_title={'Apply Global eVisa | Tourist &amp; Business eVisa Online Services | Fast Track Visa'} meta_desc={'Apply for e-visa, tourist &amp; business visa globally online Through Fast Track Visa. We ensure fewer chances of rejection, world-class security, 24/7 customer support &amp; a speedy process.'} meta_keyword="" meta_img="/img/logo.png" meta_url={'sitemap'}> </Nav>

@@ -5,33 +5,38 @@ import Searchband from './components/home-page/Search_band'
 import HomeList from './components/home-page/HomeList'
 import Simple_step from './components/Simple_step'
 import { useEffect, useState } from 'react'
-import Testimonials from './components/Testimonials'
+
 import { useRouter } from 'next/router'
 import Ready_get from './components/Ready_get'
 import Widget_v from './components/Widget_v2'
 import BlogSection from './components/home-page/Blog-Section'
 import { coundryExt } from '@/lib/server'
 import LazyLoad from 'react-lazy-load'
+import { notFound } from 'next/navigation'
+import Abrand from './components/Abrand'
+import Testimonials from './components/home-page/Testimonials'
 export default  function Home(props) { 
   
   const {locale}= useRouter();
   //console.log(props.ce_name)
- // console.log(props.homeData)
+  //console.log(props.homeData.testimonial)
   return (
     <>
      <Head>
-      <title>Fast track visa</title> 
-      <meta name="description" content='Apply for tourist e-visas and visas globally online through Fast Track Visa. We offer the most enjoyable and reliable way to obtain your visas promptly, guaranteed.' />
+     <title>Fast track visa</title> 
+     <link rel="canonical" href={`https://fasttrackvisa.com/${locale}`}/>
+     <meta name="description" content='Apply for tourist e-visas and visas globally online through Fast Track Visa. We offer the most enjoyable and reliable way to obtain your visas promptly, guaranteed.' />
      </Head>
       <>
         <Banner pageTitle={'Apply for Global Visas and ETAs Online'}/>
         <Searchband  ce_name={locale} />
         <HomeList homelists ={props.homeData.homelist}/>
         <Simple_step scountryname="Relevant" /> 
-        <Testimonials testimonialsData = {props.homeData.testimonials} />
+        <Abrand/>
+        <Testimonials testimonialsData ={props.homeData.testimonial} />
         <Ready_get></Ready_get>
         <BlogSection blogs={props.homeData.blog_arr}></BlogSection>        
-        {/* <Widget_v ce_name={locale}></Widget_v>  */}
+        <Widget_v ce_name={locale}></Widget_v> 
      
       </>
     </>
@@ -44,7 +49,9 @@ export async function getServerSideProps(ctx){
   const country_ext = ctx.locale;
   const res = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=0303334790d54efdb7a07b113b206ced`)
   if (!res.ok){
-    throw new Error('Failed to fetch data')
+    return{
+      notFound: true,
+    }
   }
   const data = await res.json() 
    if(data !== null){ 
@@ -58,8 +65,11 @@ export async function getServerSideProps(ctx){
     } 
    }
    const homeList = await fetch(`https://cms.fasttrackvisa.com/api/${country_ext}/homelisting`);
+ 
    if(!homeList.ok){
-    throw new Error('Failed to homelist data')
+    return{
+      notFound: true,
+    }
    }
    const homeData = await homeList.json()
 

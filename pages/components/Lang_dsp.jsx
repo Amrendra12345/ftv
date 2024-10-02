@@ -3,6 +3,9 @@ import React from "react";
 
 const Lang_dsp = () => {
   const { locale } = useRouter();
+  const router = useRouter();
+  const { pathname, asPath, query } = router
+  
 
   return (
     <>

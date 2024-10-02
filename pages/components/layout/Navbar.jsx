@@ -51,7 +51,7 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
-     console.log('test', session)
+     
     if (localStorage.getItem('loginDetails') !== null) {
       var loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
       if (loginDetails.email !== '' && loginDetails.email !== null && loginDetails.email !== undefined) {
@@ -243,7 +243,7 @@ const Navbar = (props) => {
                             </div>)
                             :
                             (<div className='cn_dd'>
-                              <Link href={'/' + locale + '/my-profile'}><i className='mr-2'><FaUser /></i> My Profile </Link>
+                              <Link href={'/'+ locale + '/my-profile'}><i className='mr-2'><FaUser /></i> My Profile </Link>
                               <Link href={'/' + locale + '/my-profile/my-transactions'}><i className='mr-2'><FaList /></i> My Transaction </Link>
                               <button onClick={logOut}><i className='mr-2'><FaSignOutAlt /></i> Log Out</button>
                             </div>)

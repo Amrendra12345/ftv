@@ -51,6 +51,10 @@ class Checkoutpagein extends Component {
       isCouponValid: false,
     };
   }
+
+  
+
+
   onApply = async () => {
     const formdata = new FormData();
     const { country_ext, page_url2 } = this.props;   
@@ -112,15 +116,15 @@ class Checkoutpagein extends Component {
 
   async fetchCheckoutData(isSuccess) {
     const { country_ext, page_url2 } = this.props;
-    console.log(page_url2)
+   // console.log(page_url2)
     const apiUrl = isSuccess
       ? `https://cms.fasttrackvisa.com/api/${country_ext}/checkout/${page_url2}/FTVNY`
       : `https://cms.fasttrackvisa.com/api/${country_ext}/checkout/${page_url2}`;
 
     const res = await fetch(apiUrl);
-    console.log("response", res);
+   // console.log("response", res);
     const checkoutpage = await res.json();
-    console.log("checkout", checkoutpage);
+   // console.log("checkout", checkoutpage);
 
     if (res.status === 200) {
       // Update your component state or perform other actions based on the API response
@@ -132,9 +136,6 @@ class Checkoutpagein extends Component {
     const country_ext = context.locale;
     const page_url = context.query.checkout_inid;
     const page_url2 = context.query.checkoutpage;
-    console.log(page_url)
-    console.log("country_ext", country_ext);
-    console.log("page_url2", page_url2);
     
     const res = await fetch(
       `https://cms.fasttrackvisa.com/api/${country_ext}/checkout/${page_url2}`
@@ -143,8 +144,7 @@ class Checkoutpagein extends Component {
     // console.log("country_ext", country_ext);
     // console.log("page_url2", page_url2);
    // console.log("response", res);
-    const checkoutpage = await res.json();
-     console.log("checkout new 00000000000", checkoutpage);
+    const checkoutpage = await res.json();     
     if (res.status === 200) {
       const apistatus = res.status;
       return {
@@ -164,6 +164,7 @@ class Checkoutpagein extends Component {
   }
 
   componentDidMount() {
+    
     this.addFormFields();
     this.setState({
       p_origin: localStorage.getItem("origin"),

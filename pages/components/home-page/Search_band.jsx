@@ -65,8 +65,7 @@ const Searchband = (props) => {
       setOpen(false)
    }
    const GetEvisa = ()=>{
-     // console.log(extention)
-     // console.log(destinationValue)
+    
       const destinationCountry = destinationValue.toLowerCase()
       if(extention !== null && extention !== undefined && extention !=='' && destinationCountry !== '' && destinationCountry !== undefined && destinationCountry !== null && destinationCountry !== 'Not available destination country' && destinationCountry !== 'Select...'){        
          const newLink = `/${destinationCountry}-visa`

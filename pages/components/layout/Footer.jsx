@@ -66,11 +66,11 @@ const Footer = (props) => {
                   <Col md={6}>
                   <h5>Company  </h5>
                   <ul>
-                      <li><Link href={`${locale}/sitemap`}>Sitemap</Link></li>
-                      <li><Link href={`${locale}/terms-and-conditions`}>Terms & Conditions</Link></li>
-                      <li><Link href={`${locale}/privacy-policy`}>Privacy policy</Link></li>
-                      <li><Link href={`${locale}/refund-and-cancellation`}>Refund & cancellation</Link></li>
-                      <li><Link href={`${locale}/disclaimer`}>Disclaimer</Link></li>
+                      <li><Link href={`/sitemap`}>Sitemap</Link></li>
+                      <li><Link href={`/terms-and-conditions`}>Terms & Conditions</Link></li>
+                      <li><Link href={`/privacy-policy`}>Privacy policy</Link></li>
+                      <li><Link href={`/refund-and-cancellation`}>Refund & cancellation</Link></li>
+                      <li><Link href={`/disclaimer`}>Disclaimer</Link></li>
                     </ul>
                   </Col>
                </Row>

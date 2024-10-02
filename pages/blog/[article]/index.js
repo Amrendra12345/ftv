@@ -9,63 +9,23 @@ import Image from 'next/image'
 import LazyLoad from 'react-lazy-load';
 import Widget_v from '../../components/Widget_v2';
 import ReactHtmlParser from 'react-html-parser';
+import Head from 'next/head'
 
-class Blog_detail extends Component {
-
-
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            apistatus: '',
-        };
-
-    }
-
-    static async getInitialProps(context) {
-        const page_url = context.query.article
-        const res = await fetch(`https://cms.fasttrackvisa.com/api/blog-detail/${page_url}`);
-        //console.log(res.data)
-        if (res.status === 200) {
-            const Blog_detail = await res.json()
-            const apistatus = res.status;
-            return {
-                Blog_detail, apistatus,page_url
-            }
-
-        }
-        else {
-            return {
-                Blog_detail
-            }
-        }
-    }
-
-
-    componentDidMount() {
-
-        window.addEventListener('scroll', () => {
-            let activeClass = 'hsticky';
-            if (window.scrollY === 0) {
-                activeClass = 'top';
-            }
-            this.setState({ activeClass });
-        });
-
-    }
-
-
-
-    render() {
-
-
-        return (
-            <>
-            
-                <div className="blogd-page">                 
+const Blog_page = (props) => {
+    const blogDes = ReactHtmlParser(props.Blog_detail.blog_des)
+    const metaDescrition = blogDes[0].props.children[0]
+   
+  return (
+    <> 
+   <Head>
+       <title> {props.Blog_detail.title} | Fast Track Visa </title>
+       <meta name="description" content={`${metaDescrition}`} />
+    <link rel="canonical" href={`https://fasttrackvisa.com/${props.country_ext}/blog/${props.Blog_detail.title}`}/>
+     </Head>
+      <div className="blogd-page">                 
                     <div className="checkout_banner">
                         <Container>
-                            <h1>{this.props.Blog_detail.title}</h1>
+                            <h1>{props.Blog_detail.title}</h1>
 
                         </Container>
                     </div>
@@ -83,7 +43,7 @@ class Blog_detail extends Component {
                                 Blog
                                 
                             </Link></li>
-                            <li className="breadcrumb-item active" aria-current="page">{this.props.Blog_detail.title}</li>
+                            <li className="breadcrumb-item active" aria-current="page">{props.Blog_detail.title}</li>
                         </ol>
 
                          
@@ -100,13 +60,13 @@ class Blog_detail extends Component {
 
                             <Col sm={11} md={9} lg={9}>
                                 <div className="mb-5">
-                                   <Widget_v ce_name=''></Widget_v></div>
+                                   <Widget_v ce_name='en-in'></Widget_v></div>
 
 
-                                {ReactHtmlParser(this.props.Blog_detail.blog_des)}
+                                {ReactHtmlParser(props.Blog_detail.blog_des)}
 
 
-                                <Widget_v ce_name=''></Widget_v>
+                                <Widget_v ce_name='en-in'></Widget_v>
 
 
 
@@ -119,9 +79,9 @@ class Blog_detail extends Component {
                                             src={'/img/testi1.png'}
                                             sizes='(max-width:750px) 50vw, 20wv'
                                             height={30} width={30}
-                                        />   {this.props.Blog_detail.by}
+                                        />   {props.Blog_detail.by}
 
-                                        <span className='text-right'>PUBLISHED ON {this.props.Blog_detail.date}</span></p>
+                                        <span className='text-right'>PUBLISHED ON {props.Blog_detail.date}</span></p>
 
                                 </div>
 
@@ -150,12 +110,29 @@ class Blog_detail extends Component {
                     <hr />
                    
 
-                </div>
+                </div>          
+ 
 
+   </>
+  )
+}
+export async function getServerSideProps(context){
+    const page_url = context.query.article;
+    const country_ext = context.locale;
+    const res = await fetch(`https://cms.fasttrackvisa.com/api/blog-detail/${page_url}`);
+    //console.log(res.data)
+    if (res.status === 200) {
+        const Blog_detail = await res.json()
+        const apistatus = res.status;
+        return {
+            props: {Blog_detail, apistatus, country_ext}
+        }
 
-            </>
-
-        );
+    }
+    else {
+        return {
+            props:{ Blog_detail, country_ext}
+        }
     }
 }
-export default Blog_detail;
+export default Blog_page
