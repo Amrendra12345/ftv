@@ -14,8 +14,7 @@ export default function Visa(props) {
     <>
       <Head>
         <title>{`Apply for ${page_url} Online | Fast Track Visa `}</title>
-        <meta name="description" content={`Apply for ${page_url} hassle free online. We offer quick processing and expert assistance. Start your  visa application today!`} />
-        <link rel="alternate" href='https://fasttrackvisa.com' hreflang={`locale`} />
+        <meta name="description" content={`Apply for ${page_url} hassle free online. We offer quick processing and expert assistance. Start your  visa application today!`} />       
         <link rel="canonical" href={`https://fasttrackvisa.com/${locale}/${page_url}`} />
       </Head>
       <Banner pageTitle={`Your ${page_url} Is Just A Few Clicks Away...`} />
@@ -208,12 +207,17 @@ export default function Visa(props) {
 									 allproduct.title == 'ויזה אלקטרונית לתיירים לקניה' ? '/country/Kenya.jpg':
 									 allproduct.title == 'ניו זילנד תיירות ETA' ? '/country/newZealand.jpg':
 									 allproduct.title == 'קנדה תיירות ETA' ? '/country/Canada.jpg':
+									 allproduct.title == 'ויזה אלקטרונית לתייר של טג&#39;יקיסטן' ? '/country/tajikistan.jpg':
+									 allproduct.title == 'ויזה אלקטרונית לתיירים של ארמניה' ? '/country/Armenian.jpg':
+									 allproduct.title == 'ויזה אלקטרונית לתיירים למרוקו' ? '/country/Morocco.jpg':
 	  
 									 //27  BULGARRIA
 									 allproduct.title == 'Виетнамска туристическа електронна виза' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Туристическа електронна виза за Камбоджа' ? '/country/Cambodia.jpg':
 									 allproduct.title == 'Индийска туристическа електронна виза' ? '/country/India.jpg':
 									 allproduct.title == 'Туристическа електронна виза за Шри Ланка' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Бизнес електронна виза за Шри Ланка' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Транзитна електронна виза за Шри Ланка' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'Египетска туристическа електронна виза' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Австралийска е посетителска виза' ? '/country/Australia.jpg':
 									 allproduct.title == 'Азербайджанска туристическа електронна виза' ? '/country/Azerbaijan.jpg':
@@ -223,14 +227,26 @@ export default function Visa(props) {
 									 allproduct.title == 'Новозеландски туристически ETA' ? '/country/newZealand.jpg':
 									 allproduct.title == 'Електронна туристическа виза за Русия' ? '/country/Russia.jpg':
 									 allproduct.title == 'ESTA туристическа виза за САЩ' ? '/country/USA.jpg':
+									 allproduct.title == 'Бизнес ESTA в САЩ' ? '/country/USA 1.jpg':
 									 allproduct.title == 'Канадски туристически ETA' ? '/country/Canada.jpg':
+									 allproduct.title == 'Бизнес електронна виза за Индия' ? '/country/India 1.jpg':
+									 allproduct.title == 'Лаоска туристическа електронна виза' ? '/country/Laos.jpg':
+									 allproduct.title == 'Електронна туристическа виза за Саудитска Арабия' ? '/country/Saudi Arabia.jpg':
+									 allproduct.title == 'Индонезийска туристическа електронна виза' ? '/country/Indonesia1.jpg':
+									 allproduct.title == 'Туристическа електронна виза за Оман' ? '/country/Oman.jpg':
+									 allproduct.title == 'Бизнес електронна виза за Камбоджа' ? '/country/Cambodia 2.jpg':
 									 //28 FRANCE
+									 allproduct.title == 'Visa d&#39;affaires pour l&#39;Inde' ? '/country/India 1.jpg':
 									 //29 ITALY
 	  
 									 allproduct.title == 'Visto turistico elettronico per il Vietnam' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Visto elettronico turistico per la Cambogia' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Visto elettronico per affari per la Cambogia' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Visto elettronico turistico per l&#39;India' ? '/country/India.jpg':
+									 allproduct.title == 'Visto elettronico per affari per l&#39;India' ? '/country/India 1.jpg':
 									 allproduct.title == 'Visto elettronico per lo Sri Lanka' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Visto elettronico di transito per lo Sri Lanka' ? '/country/Srilanka 2.jpg':
+									 allproduct.title == 'Visto elettronico per affari dello Sri Lanka' ? '/country/Srilanka 1.jpg':
 									 allproduct.title == 'Visto turistico elettronico per l&#39;Egitto' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australia e Visto turistico' ? '/country/Australia.jpg':
 									 allproduct.title == 'Visto turistico elettronico per l&#39;Azerbaigian' ? '/country/Azerbaijan.jpg':
@@ -241,12 +257,20 @@ export default function Visa(props) {
 									 allproduct.title == 'Visto turistico elettronico per la Russia' ? '/country/Russia.jpg':
 									 allproduct.title == 'Visto turistico ESTA USA' ? '/country/USA.jpg':
 									 allproduct.title == 'ETA turistico canadese' ? '/country/Canada.jpg':
+									 allproduct.title == 'Visto turistico elettronico per il Laos' ? '/country/Laos.jpg':
+                                     allproduct.title == 'Visto turistico elettronico per l&#39;Arabia Saudita' ? '/country/Saudi Arabia.jpg':
+                                     allproduct.title == 'Visto elettronico per l&#39;Indonesia' ? '/country/Indonesia1.jpg':
+                                     allproduct.title == 'Visto turistico elettronico per l&#39;Oman' ? '/country/Oman.jpg':
 									 //30 DENMARK
 	  
 									 allproduct.title == 'Vietnam turist e-visum' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Cambodja turist e-visum' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Cambodja Business E-visum' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Indien turist e-visum' ? '/country/India.jpg':
+									 allproduct.title == 'Indien Business E-Visa' ? '/country/India 1.jpg':
 									 allproduct.title == 'Sri Lanka turist e-visum' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Sri Lanka Business E-Visa' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Sri Lanka Transit E-visum' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'Egyptens turist e-visum' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australien e Besøgsvisum' ? '/country/Australia.jpg':
 									 allproduct.title == 'Aserbajdsjan turist e-visum' ? '/country/Azerbaijan.jpg':
@@ -264,8 +288,12 @@ export default function Visa(props) {
 									 allproduct.title == 'Vietnamské turistické elektronické vízum' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Laosské turistické elektronické vízum' ? '/country/Laos.jpg':
 									 allproduct.title == 'Kambodžské turistické elektronické vízum' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Kambodžské obchodné e-vízum' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Indické turistické elektronické vízum' ? '/country/India.jpg':
+									 allproduct.title == 'Obchodné E-víza v Indii' ? '/country/India 1.jpg':
 									 allproduct.title == 'Turistické elektronické víza Srí Lanky' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Obchodné elektronické víza Srí Lanky' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Srílanské tranzitné elektronické vízum' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'Egyptské turistické elektronické vízum' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Austrália a návštevnícke víza' ? '/country/Australia.jpg':
 									 allproduct.title == 'Azerbajdžanské turistické elektronické víza' ? '/country/Azerbaijan.jpg':
@@ -286,6 +314,7 @@ export default function Visa(props) {
 	  
 									 allproduct.title == 'Kambodsja turist e-visum' ? '/country/Cambodia.jpg':
 									 allproduct.title == 'India turist e-visum' ? '/country/India.jpg':
+									 allproduct.title == 'India Business E-visum' ? '/country/India 5.jpg':
 									 allproduct.title == 'Egypt turist e-visum' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australia e besøksvisum' ? '/country/Australia.jpg':
 									 allproduct.title == 'Saudi-Arabia turist e-visum' ? '/country/Saudi Arabia.jpg':
@@ -299,14 +328,19 @@ export default function Visa(props) {
 									 allproduct.title == 'Visa electrónica de turista para Arabia Saudita' ? '/country/Saudi Arabia.jpg':
 									 allproduct.title == 'Visa electrónica de turista para Indonesia' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'Visa electrónica de turista para Omán' ? '/country/Oman.jpg':
+									 allproduct.title == 'ESTA de negocios de EE. UU.' ? '/country/Usa 1.jpg':
 									 // croatia
 									 //36 poland
 	  
 									 allproduct.title == 'E-Visa turystyczna do Wietnamu' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'E-Visa turystyczna do Laosu' ? '/country/Laos.jpg':
 									 allproduct.title == 'E-Visa turystyczna do Kambodży' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'E-Visa biznesowa do Kambodży' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'E-wiza turystyczna do Indii' ? '/country/India.jpg':
+									 allproduct.title == 'E-wiza biznesowa do Indii' ? '/country/India 3.jpg':
 									 allproduct.title == 'E-Visa turystyczna do Sri Lanki' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Biznesowa e-Visa do Sri Lanki' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'E-Visa tranzytowa do Sri Lanki' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'E-Visa turystyczna do Egiptu' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australia i wiza turystyczna' ? '/country/Australia.jpg':
 									 allproduct.title == 'Turystyczna e-Visa do Azerbejdżanu' ? '/country/Azerbaijan.jpg':
@@ -325,7 +359,13 @@ export default function Visa(props) {
 									 allproduct.title == 'Vietnamo turistinė elektroninė viza' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Laoso turistinė elektroninė viza' ? '/country/Laos.jpg':
 									 allproduct.title == 'Kambodžos turistinė elektroninė viza' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Kambodžos verslo elektroninė viza' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Indijos turistinė elektroninė viza' ? '/country/India.jpg':
+									 allproduct.title == 'Indijos verslo elektroninė viza' ? '/country/India 1.jpg':
+
+									 allproduct.title == 'Šri Lankos verslo elektroninė viza' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Šri Lankos tranzitinė elektroninė viza' ? '/country/Srilanka 2.jpg':
+
 									 allproduct.title == 'Šri Lankos turistinė elektroninė viza' ? '/country/Srilanka.jpg':
 									 allproduct.title == 'Egipto turistinė elektroninė viza' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australijos e lankytojų viza' ? '/country/Australia.jpg':
@@ -339,14 +379,19 @@ export default function Visa(props) {
 									 allproduct.title == 'Indonezijos turistinė elektroninė viza' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'Omano turistinė elektroninė viza' ? '/country/Oman.jpg':
 									 allproduct.title == 'JAV turistinė ESTA VISA' ? '/country/USA.jpg':
+									 allproduct.title == 'JAV verslo ESTA' ? '/country/USA 1.jpg':
 									 allproduct.title == 'Kanados turistinis ETA' ? '/country/Canada.jpg':
 									 //36 Romania
 	  
 									 allproduct.title == 'Viză electronică turistică pentru Vietnam' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'E-Viză turistică pentru Laos' ? '/country/Laos.jpg':
 									 allproduct.title == 'E-Viză turistică pentru Cambodgia' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'E-Visa de afaceri pentru Cambodgia' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Viză electronică turistică pentru India' ? '/country/India.jpg':
+									 allproduct.title == 'E-Visa de afaceri pentru India' ? '/country/India 3.jpg':
 									 allproduct.title == 'E-Visa turistica pentru Sri Lanka' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'E-Visa de afaceri pentru Sri Lanka' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'E-Visa de tranzit pentru Sri Lanka' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'E-Visa turistica pentru Egipt' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australia e Viza de vizitator' ? '/country/Australia.jpg':
 									 allproduct.title == 'E-Visa turistica pentru Azerbaidjan' ? '/country/Azerbaijan.jpg':
@@ -359,14 +404,19 @@ export default function Visa(props) {
 									 allproduct.title == 'Viză electronică turistică pentru Indonezia' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'E-Viză turistică pentru Oman' ? '/country/Oman.jpg':
 									 allproduct.title == 'VISA ESTA Turist SUA' ? '/country/USA.jpg':
+									 allproduct.title == 'SUA Business ESTA' ? '/country/USA 1.jpg':
 									 allproduct.title == 'Canada Turist ETA' ? '/country/Canada.jpg':
 									  //37 Latvia
 	  
 									 allproduct.title == 'Vjetnamas tūristu e-vīza' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Laosas tūristu e-vīza' ? '/country/Laos.jpg':
 									 allproduct.title == 'Kambodžas tūristu e-vīza' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Kambodžas biznesa e-vīza' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Indijas tūristu e-vīza' ? '/country/India.jpg':
+									 allproduct.title == 'Indijas biznesa e-vīza' ? '/country/India 2.jpg':
 									 allproduct.title == 'Šrilankas tūristu e-vīza' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Šrilankas tranzīta e-vīza' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Šrilankas biznesa e-vīza' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'Ēģiptes tūristu e-vīza' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Austrālijas e apmeklētāju vīza' ? '/country/Australia.jpg':
 									 allproduct.title == 'Azerbaidžānas tūristu e-vīza' ? '/country/Azerbaijan.jpg':
@@ -379,13 +429,16 @@ export default function Visa(props) {
 									 allproduct.title == 'Indonēzijas tūristu e-vīza' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'Omānas tūristu e-vīza' ? '/country/Oman.jpg':
 									 allproduct.title == 'ASV tūristu ESTA VISA' ? '/country/USA.jpg':
+									 allproduct.title == 'ASV biznesa ESTA' ? '/country/USA 1.jpg':
 									 allproduct.title == 'Kanādas tūristu ETA' ? '/country/Canada.jpg':
 	  
 									 // 38 Netherlands
 									 allproduct.title == 'E-Toeristenvisum voor Vietnam' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Laos e-toeristenvisum' ? '/country/Laos.jpg':
 									 allproduct.title == 'E-Toeristenvisum voor Cambodja' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'E-Zakenvisum Cambodja' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'E-Toeristenvisum voor India' ? '/country/India.jpg':
+									 allproduct.title == 'E-Zakenvisum voor India' ? '/country/India 1.jpg':
 									 allproduct.title == 'E-Toeristenvisum voor Sri Lanka' ? '/country/Srilanka.jpg':
 									 allproduct.title == 'E-Toeristenvisum voor Egypte' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Australië e bezoekersvisum' ? '/country/Australia.jpg':
@@ -399,6 +452,7 @@ export default function Visa(props) {
 									 allproduct.title == 'E-Toeristenvisum voor Indonesië' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'E-Toeristenvisum voor Oman' ? '/country/Oman.jpg':
 									 allproduct.title == 'VS Toeristen ESTA VISA' ? '/country/USA.jpg':
+									 allproduct.title == 'Zakelijk ESTA VS' ? '/country/USA 1.jpg':
 									 allproduct.title == 'Toeristen ETA Canada' ? '/country/Canada.jpg':
 									 // 39 Rusia
 									 //40 Belgium
@@ -408,14 +462,19 @@ export default function Visa(props) {
 									 allproduct.title == 'Visa touristique électronique pour l&#39;Indonésie' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'E-visa de tourisme pour Oman' ? '/country/Oman.jpg':
 									 allproduct.title == 'ETA de tourisme au Canada' ? '/country/Canada.jpg':
+									 allproduct.title == 'E-transitvisum voor Sri Lanka' ? '/country/srilanka 2.jpg':
+									 allproduct.title == 'E-Zakenvisum voor Sri Lanka' ? '/country/srilanka 1.jpg':
 									  //41 Czech Republic
 									  //42 Greece
 	  
 									 allproduct.title == 'Τουριστική ηλεκτρονική θεώρηση Βιετνάμ' ? '/country/Vietnam.jpg':
 									 allproduct.title == 'Τουριστική ηλεκτρονική θεώρηση του Λάος' ? '/country/Laos.jpg':
 									 allproduct.title == 'Τουριστική Ηλεκτρονική Βίζα Καμπότζης' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Επιχειρηματική ηλεκτρονική θεώρηση Καμπότζης' ? '/country/Cambodia 1.jpg':
+									 
 									 allproduct.title == 'Τουριστική Ηλεκτρονική Βίζα Ινδίας' ? '/country/India.jpg':
 									 allproduct.title == 'Τουριστική ηλεκτρονική θεώρηση της Σρι Λάνκα' ? '/country/Srilanka.jpg':
+									 allproduct.title == 'Σρι Λάνκα Business E-Visa' ? '/country/Srilanka 1.jpg':
 									 allproduct.title == 'Τουριστική Ηλεκτρονική Βίζα Αιγύπτου' ? '/country/Egypt.jpg':
 									 allproduct.title == 'Αυστραλία e Visitor Visa' ? '/country/Australia.jpg':
 									 allproduct.title == 'Τουριστική ηλεκτρονική θεώρηση του Αζερμπαϊτζάν' ? '/country/Azerbaijan.jpg':
@@ -429,19 +488,26 @@ export default function Visa(props) {
 									 allproduct.title == 'Τουριστική ηλεκτρονική βίζα Κουβέιτ' ? '/country/Kuwait.jpg':
 									 allproduct.title == 'Τουριστική Ηλεκτρονική Βίζα Κένυας' ? '/country/Kenya.jpg':
 									  //43 Portugal
-	  
+									  allproduct.title == 'E-Visa de trânsito do Sri Lanka' ? '/country/Srilanka 1.jpg':
+									  allproduct.title == 'Visto eletrônico de negócios do Sri Lanka' ? '/country/Srilanka 2.jpg':
 									 allproduct.title == 'Visto eletrônico laosiano de turista' ? '/country/Laos.jpg':
 									 allproduct.title == 'Austrália e visto de visitante' ? '/country/Australia.jpg':
 									 allproduct.title == 'E-Visa de turista para o Kuwait' ? '/country/Kuwait.jpg':
 									 allproduct.title == 'Arábia Saudita E-Visa de turista' ? '/country/Saudi Arabia.jpg':
 									 allproduct.title == 'Rússia E-Visa de turista' ? '/country/Russia.jpg':
+									 allproduct.title == 'ESTA Empresarial dos EUA' ? '/country/Usa 1.jpg':
 									 allproduct.title == 'Visto eletrônico de turista para a Indonésia' ? '/country/Indonesia1.jpg':
 									 allproduct.title == 'E-Visa omã de turista' ? '/country/Oman.jpg':
 									 allproduct.title == 'VISA ESTA de turista nos EUA' ? '/country/USA.jpg':
 									 allproduct.title == 'Canadá Turismo ETA' ? '/country/Canada.jpg':
+									 allproduct.title == 'Visto eletrônico cambojano de negócios' ? '/country/Cambodia 1.jpg':
+									 allproduct.title == 'Visto eletrônico indiano de negócios' ? '/country/India 1.jpg':
 									 //44 Sweden
 									 allproduct.title == 'Kambodja turist E-visum' ? '/country/Cambodia.jpg':
+									 allproduct.title == 'Kambodja Business E-visum' ? '/country/Cambodia 1.jpg':
 									 allproduct.title == 'Australien e besöksvisum' ? '/country/Australia.jpg':
+									 allproduct.title == 'Sri Lanka Transit E-Visum' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Indien Business E-visum' ? '/country/India 1.jpg':
 									 allproduct.title == 'Azerbajdzjan turist e-visum' ? '/country/Azerbaijan.jpg':
 									 allproduct.title == 'Kenya turist E-visum' ? '/country/Kenya 1.jpg':
 									 allproduct.title == 'Nya Zeelands turist ETA' ? '/country/newZealand.jpg':
@@ -456,6 +522,10 @@ export default function Visa(props) {
 									 allproduct.title == 'Visa electrónica de turista para Turquía' ? '/country/Turkey.jpg':
 									 allproduct.title == 'Visa electrónica de turista para Ucrania' ? '/country/Ukraine 1.jpg':
 									 allproduct.title == 'Visa electrónica de turista para Tailandia' ? '/country/Thailand.jpg':
+									 allproduct.title == 'Visa electrónica de negocios de Camboya' ? '/country/Cambodia 2.jpg':
+									 allproduct.title == 'Visa electrónica de negocios de la India' ? '/country/India 1.jpg':
+									 allproduct.title == 'Visa electrónica de negocios de Sri Lanka' ? '/country/Srilanka 1.jpg':
+									 allproduct.title == 'Visa electrónica de tránsito de Sri Lanka' ? '/country/Srilanka 2.jpg':
 									 //44 Brazil
 	  
 									 allproduct.title == 'E-Visa de turista para o Tadjiquistão' ? '/country/tajikistan.jpg':
@@ -464,7 +534,11 @@ export default function Visa(props) {
 									 allproduct.title == 'Laosin turistiviisumi' ? '/country/Laos.jpg':
 									 allproduct.title == 'Saudi-Arabian turisti E-Visa' ? '/country/Saudi Arabia.jpg':
 									 allproduct.title == 'Indonesian turistiviisumi' ? '/country/Indonesia1.jpg':
-									 allproduct.title == 'Oman Tourist E-Visa' ? '/country/Oman.jpg':
+									 allproduct.title == 'Oman Tourist E-Visa' ? '/country/Oman.jpg':									
+									 allproduct.title == 'Intian liiketoiminnan sähköinen viisumi' ? '/country/India 1.jpg':
+									 allproduct.title == 'Sri Lankan kauttakulku E-Visa' ? '/country/Srilanka 2.jpg':
+									 allproduct.title == 'Sri Lankan turisti E-Visa' ? '/country/Srilanka 3.jpg':
+
 									 //46 China 
 									 allproduct.title == '老挝旅游电子签证' ? '/country/Laos.jpg':
 									 allproduct.title == '南非旅游电子签证' ? '/country/South Africa.jpg':

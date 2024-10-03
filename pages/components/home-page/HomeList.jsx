@@ -172,6 +172,10 @@ export default function HomeList(props) {
                                list.title == 'ניו זילנד תיירות ETA' ? '/country/newZealand.jpg':
                                list.title == 'קנדה תיירות ETA' ? '/country/Canada.jpg':
 
+                               list.title == 'ויזה אלקטרונית לתייר של טג&#39;יקיסטן' ? '/country/tajikistan.jpg':
+                               list.title == 'ויזה אלקטרונית לתיירים של ארמניה' ? '/country/Armenian.jpg':
+                               list.title == 'ויזה אלקטרונית לתיירים למרוקו' ? '/country/Morocco.jpg':
+                             
                                //27  BULGARRIA
                                list.title == 'Виетнамска туристическа електронна виза' ? '/country/Vietnam.jpg':
                                list.title == 'Туристическа електронна виза за Камбоджа' ? '/country/Cambodia.jpg':
@@ -187,6 +191,12 @@ export default function HomeList(props) {
                                list.title == 'Електронна туристическа виза за Русия' ? '/country/Russia.jpg':
                                list.title == 'ESTA туристическа виза за САЩ' ? '/country/USA.jpg':
                                list.title == 'Канадски туристически ETA' ? '/country/Canada.jpg':
+
+                               list.title == 'Лаоска туристическа електронна виза' ? '/country/Laos.jpg':
+                               list.title == 'Електронна туристическа виза за Саудитска Арабия' ? '/country/Saudi Arabia.jpg':
+                               list.title == 'Индонезийска туристическа електронна виза' ? '/country/Indonesia1.jpg':
+                               list.title == 'Туристическа електронна виза за Оман' ? '/country/Oman.jpg':
+                               
                                //28 FRANCE
                                //29 ITALY
 
@@ -203,7 +213,12 @@ export default function HomeList(props) {
                                list.title == 'ETA turistico neozelandese' ? '/country/newZealand.jpg':
                                list.title == 'Visto turistico elettronico per la Russia' ? '/country/Russia.jpg':
                                list.title == 'Visto turistico ESTA USA' ? '/country/USA.jpg':
-                               list.title == 'ETA turistico canadese' ? '/country/Canada.jpg':
+                               list.title == 'ETA turistico canadese' ? '/country/Canada.jpg': 
+
+                               list.title == 'Visto turistico elettronico per il Laos' ? '/country/Laos.jpg':
+                               list.title == 'Visto turistico elettronico per l&#39;Arabia Saudita' ? '/country/Saudi Arabia.jpg':
+                               list.title == 'Visto elettronico per l&#39;Indonesia' ? '/country/Indonesia1.jpg':
+                               list.title == 'Visto turistico elettronico per l&#39;Oman' ? '/country/Oman.jpg':
                                //30 DENMARK
 
                                list.title == 'Vietnam turist e-visum' ? '/country/Vietnam.jpg':

@@ -268,14 +268,11 @@ const Lang_dd = (props) => {
         ""
       ) : locale === "lt-lt" ? (
         ""
-      ) : locale === "ro-ro" || locale === "hu-ro" ? (
+      ) : locale === "ro-ro"  ? (
         <div className="cn_dd la_ndd">
           <Link href={locale === 'ro-ro' ? 'ro-ro' : `${asPath}`} locale="ro-ro">
             Română
-          </Link>
-          <Link href={locale === 'hu-ro' ? 'hu-ro' : `${asPath}`} locale="hu-ro">
-            Magyar
-          </Link>
+          </Link>          
         </div>
       ) : locale === "lv-lv" ? (
         ""
