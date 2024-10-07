@@ -798,8 +798,9 @@ class Checkoutpagein extends Component {
                       alt={this.props.checkoutpage[0].title}
                       sizes="(max-width: 500px) 30vw"
                       src={
-                        "https://ik.imagekit.io/vs4gypuhi/" +
-                        this.props.checkoutpage[0].imageurl
+                        // "https://ik.imagekit.io/vs4gypuhi/" +
+                        // this.props.checkoutpage[0].imageurl
+                        '/country/countryDefaulr.jpg'
                       }
                      
                       height={254}

@@ -7,15 +7,15 @@ const nextConfig = {
       includePaths: [path.join(__dirname, 'styles')],
     },
     images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'ik.imagekit.io',
-          port: '',
-          pathname: '/vs4gypuhi/**',
-        },
-      ],
-      minimumCacheTTL: 60,
+      // remotePatterns: [
+      //   {
+      //     protocol: 'https',
+      //     hostname: 'ik.imagekit.io',
+      //     port: '',
+      //     pathname: '/vs4gypuhi/**',
+      //   },
+      // ],
+      // minimumCacheTTL: 60,
     },
     i18n: {
       locales: ['default', ...lang],

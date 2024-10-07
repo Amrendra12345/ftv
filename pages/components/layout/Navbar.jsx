@@ -151,19 +151,16 @@ const Navbar = (props) => {
     var loginDetail = { provider_id: '', provider: '', name: '', email: '', mobile_number: '' };
     localStorage.setItem('loginDetails', JSON.stringify(loginDetail));
     //console.log('setTimeout')
+    setUserName('');
     if (locale != '') {
       if (props?.handleCallback) {
         props?.handleCallback(false);
         router.push('/','/',  { locale })
-      } else {
-        router.push('/','/',  { locale })
-      }
+      } 
     }
     else {
       if (props?.handleCallback) {
         props?.handleCallback(false);
-        router.push('/','/',  { locale })
-      } else {
         router.push('/','/',  { locale })
       }
     }
@@ -175,9 +172,7 @@ const Navbar = (props) => {
       }, 1);
       if (locale != '') {
         router.push('/','/',  { locale })
-      } else {
-        router.push('/','/',  { locale })
-      }
+      } 
     }
   }
 

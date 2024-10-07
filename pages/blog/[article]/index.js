@@ -120,6 +120,11 @@ export async function getServerSideProps(context){
     const page_url = context.query.article;
     const country_ext = context.locale;
     const res = await fetch(`https://cms.fasttrackvisa.com/api/blog-detail/${page_url}`);
+    if (!res.ok){
+        return{
+          notFound: true,
+        }
+       }
     //console.log(res.data)
     if (res.status === 200) {
         const Blog_detail = await res.json()

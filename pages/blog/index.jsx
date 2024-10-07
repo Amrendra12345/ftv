@@ -114,10 +114,12 @@ export const getServerSideProps = async(cxt)=>{
   const country_ext = cxt.locale;
   const res = await fetch(`https://cms.fasttrackvisa.com/api/blogs${(pageurl2 === undefined ? '' : '?page=' + pageurl2)}`);
   if (!res.ok){
-    throw new Error('Failed to fetch data')
+    return{
+      notFound: true,
+    }
    }
   const Blog_page = await res.json()
-  console.log(Blog_page)
+  //console.log(Blog_page)
   return{
      props: {Blog_page, country_ext}
   }

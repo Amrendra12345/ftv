@@ -11,7 +11,7 @@ export default function HomeList(props) {
       <div className="container">
         <Row>
           {Array.isArray(props.homelists) &&
-            props.homelists.map((list, i) => {
+            props.homelists?.map((list, i) => { 
               return (
                 <Col sm={6} md={4} key={i}>
                   <div className="pro-div">

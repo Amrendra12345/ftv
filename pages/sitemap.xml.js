@@ -9,7 +9,7 @@ function generateSiteMap(posts) {
      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">       
        
          ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -18,7 +18,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
           ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/about-us`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -27,7 +27,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
            ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/contact-us`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -36,7 +36,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
           ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/career`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -45,7 +45,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
          ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/terms-and-conditions`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -54,7 +54,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
           ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/privacy-policy`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -63,7 +63,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
            ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/refund-and-cancellation`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -72,7 +72,7 @@ function generateSiteMap(posts) {
             }).join('')
          }
            ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/disclaimer`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -84,7 +84,7 @@ function generateSiteMap(posts) {
          <loc>https://jsonplaceholder.typicode.com/guide</loc>
          <lastmod>${new Date().toISOString()}</lastmod>
        </url>
-       ${posts.homelist.map((home) =>{
+       ${posts.homelist?.map((home) =>{
           return ` <url>
              <loc>${`${baseUrl}/${home.urllink}`}</loc>
              <lastmod> ${new Date().toISOString()}</lastmod>
@@ -95,7 +95,7 @@ function generateSiteMap(posts) {
          
            
             ${
-            Curr_list.map((country)=>{
+            Curr_list?.map((country)=>{
                 return ` <url>
                     <loc>${`${baseUrl}/${country}/blog`}</loc>
                     <lastmod> ${new Date().toISOString()}</lastmod>
@@ -103,7 +103,7 @@ function generateSiteMap(posts) {
                </url>`               
              }).join('')
            }
-            ${Curr_list.map((country)=>{
+            ${Curr_list?.map((country)=>{
                 return posts.homelist.map((home)=>{
                     return `<url>
                             <loc>${`${baseUrl}/${country}/${home.urllink}`}</loc>
@@ -113,7 +113,7 @@ function generateSiteMap(posts) {
                 })
            }).join('')}
 
-           ${Curr_list.map((country)=>{
+           ${Curr_list?.map((country)=>{
                 return posts.blog_arr.map((blog)=>{
                     return `<url>
                             <loc>${`${baseUrl}/blog/${country}/${blog.title}`}</loc>
@@ -122,8 +122,6 @@ function generateSiteMap(posts) {
                         </url>`
                 })
            }).join('')}
-          
-
      </urlset>
    `;
   }

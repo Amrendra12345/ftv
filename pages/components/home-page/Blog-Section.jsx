@@ -38,7 +38,7 @@ export default function BlogSection(props) {
           <p>Stay up-to-date on Global Travel Requirements</p>
         </div>
         <Slider {...Testimonials_sl}>
-          {Array.isArray(props.blogs) && props.blogs.map((blog_arr, i) => (
+          {Array.isArray(props.blogs) && props.blogs?.map((blog_arr, i) => (
             <div className="blog-box" title={blog_arr.title} key={i}>
               <Link href={"/blog/" + blog_arr.blogtitle}>              
                   <figure>

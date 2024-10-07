@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Slider from "react-slick";
 
 const Testimonials = (props) => {
-  console.log(props.testimonialsData)
+  //console.log(props.testimonialsData)
   var Testimonials_sl = {
     dots: false,
     infinite: false,
@@ -38,7 +38,7 @@ const Testimonials = (props) => {
         </div>
         <Slider {...Testimonials_sl}>
         {Array.isArray(props.testimonialsData) &&
-            props.testimonialsData.map((testimonial, n) => {
+            props.testimonialsData?.map((testimonial, n) => {
                 return(
                   <div className="testi-box" key={n}>
                       <div className="testi-desc">
@@ -46,8 +46,9 @@ const Testimonials = (props) => {
                         <p>{testimonial.description}</p>
                       </div>
                       <div className="testi-info">
-                       <Image src={n == 1 ? '/img/testi2.png':'/img/testi1.png'} alt='Becca' sizes='(max-width: 768px) 30vw, 20vw' width={70} height={70} priority="false" />
-                      <div>
+                        {/* <Image src={`/${testimonial.image}`} alt='Becca' sizes='(max-width: 768px) 30vw, 20vw' width={70} height={70} priority="false" />
+                        */}
+                      <div style={{textAlign:'center'}}>
                         <p className='small_heading'>{testimonial.title}</p>
                         <p>{testimonial.city} </p>
                       </div>

@@ -1,0 +1,21 @@
+import Image from "next/image"
+export default function Custom404({ statusCode }) {
+    return <div className="error">
+    <div className="container mt-5 mb-5">
+        <div className="row justify-content-center">
+            <div className="col-12 col-sm-8 col-md-6">
+                <div className="card card-body text-center">
+                    <a href={'/'} className="navbar-brand">
+                        <Image src="/img/logo.png" width="209" height="56" alt="Fast Track Visa" /> </a>
+                        <h4 className="mt-2 h3">404 Error,<br/> Something went wrong please try again</h4>
+
+                    <p>
+                        <a href={'/'} className="btn btn-dark">Click Here</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  }
