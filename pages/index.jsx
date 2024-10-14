@@ -4,17 +4,13 @@ import CountryExLists from '../countyExList'
 import Searchband from './components/home-page/Search_band'
 import HomeList from './components/home-page/HomeList'
 import Simple_step from './components/Simple_step'
-import { useEffect, useState } from 'react'
-
 import { useRouter } from 'next/router'
 import Ready_get from './components/Ready_get'
 import Widget_v from './components/Widget_v2'
 import BlogSection from './components/home-page/Blog-Section'
-import { coundryExt } from '@/lib/server'
-import LazyLoad from 'react-lazy-load'
-import { notFound } from 'next/navigation'
 import Abrand from './components/Abrand'
 import Testimonials from './components/home-page/Testimonials'
+import SearchCountry from './components/home-page/searchCountry'
 export default  function Home(props) { 
   
   const {locale}= useRouter();
@@ -29,7 +25,8 @@ export default  function Home(props) {
      </Head>
       <>
         <Banner pageTitle={'Apply for Global Visas and ETAs Online'}/>
-        <Searchband  ce_name={locale} />
+        <SearchCountry ce_name={locale}/>
+        {/* <Searchband  ce_name={locale} /> */}
         <HomeList homelists ={props.homeData.homelist}/>
         <Simple_step scountryname="Relevant" /> 
         <Abrand/>
@@ -58,15 +55,15 @@ export async function getServerSideProps(ctx){
     if (data.country_code !== null && data.country_code !== 'US'){
       const country_code =  data.country_code.toLowerCase();
       for(let CountryExList of CountryExLists){
-         if(CountryExList.split('-')[1] ===  country_code){                  
+         if(CountryExList.split('-')[1] ===  country_code){
               ce_name = CountryExList
          }
       }
     } 
    }
-   const homeList = await fetch(`https://cms.fasttrackvisa.com/api/${country_ext}/homelisting`);
- 
-   if(!homeList.ok){
+   const homeList = await fetch(`${process.env.BASE_URL}/api/${country_ext}/homelisting`);
+  
+   if(!homeList.ok || homeList.length === 0){
     return{
       notFound: true,
     }

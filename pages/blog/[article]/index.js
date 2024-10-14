@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image'
-import LazyLoad from 'react-lazy-load';
 import Widget_v from '../../components/Widget_v2';
 import ReactHtmlParser from 'react-html-parser';
 import Head from 'next/head'

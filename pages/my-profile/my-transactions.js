@@ -5,11 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import LazyLoad from 'react-lazy-load';
 import { useRouter } from 'next/router';
-// import Nav from '../../../pages/components/Nav';
-// import Footer from '../../../pages/components/Footer';
-
 
 const My_transactions_in = () => {
 	const {locale} = useRouter()
@@ -23,11 +19,6 @@ const My_transactions_in = () => {
 
 	return (
 		<>
-
-			{/* <header className={'App-header' + ` ${activeClass}`}>
-				<Nav ce_name={c_ext} lob_name="home_page" meta_title={'Apply Global eVisa | Tourist &amp; Business eVisa Online Services | Fast Track Visa'} meta_desc={'Apply for e-visa, tourist &amp; business visa globally online Through Fast Track Visa. We ensure fewer chances of rejection, world-class security, 24/7 customer support &amp; a speedy process.'} meta_keyword="" meta_img="/img/logo.png" meta_url={'my-profile/my-transactions'}> </Nav>
-			</header> */}
-
 			<div className="checkout_banner">
 
 				<Container>

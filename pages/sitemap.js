@@ -3,10 +3,7 @@ import Link from 'next/link';
 // import Router from 'next/router';
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import LazyLoad from 'react-lazy-load';
 import Head from 'next/head'
-// import Nav from '../pages/components/Nav';
-// import Footer from '../pages/components/Footer';
 class Sitemap extends Component {
 
     constructor(props, context) {

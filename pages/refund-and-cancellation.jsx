@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
-import LazyLoad from "react-lazy-load";
+
 import Head from "next/head";
 const RefundCancellation = (props) => {
  

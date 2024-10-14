@@ -1,21 +1,35 @@
 
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
 .banner{
     width: 100%;
     background-color: #010032; 
     position: relative;
-    height: 300px;
-    margin-top: -88px;
+    height: 360px;
+    margin-top: -80px;
+    @media screen and (max-width: 480px)  {
+        height: 170px;
+    }
     .videos_banner{
         position: absolute;
         width: 100%;
-        top: -135px;
+        top: -75px;
         height: 440px;
         padding-top: 1px;
         overflow: hidden;
-         z-index: 9;               
+         z-index: 9;      
+         @media screen and (max-width: 480px){
+            top: -334px;
+            height: 560px;
+         }         
         .react-player{
             position: absolute;
-            top: -90px;
+            top: -120px;
             left: 0;
             height: 1200px !important;
             z-index: 999;
@@ -33,6 +47,9 @@
         color: #fff;
         border-radius: 4px;
         z-index: 999;
+        @media screen and (max-width: 480px){
+            bottom: -60px;
+        }
     }
 }
 .big_title{
@@ -118,7 +135,7 @@
             max-height: 275px;
             overflow: auto;
             background-color: #fff;
-            box-shadow: 0 2px 3px #3333;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     
             &::-webkit-scrollbar {
                 width: 10px;
@@ -286,4 +303,9 @@ header
 
 .p-Grid{
     margin-bottom: 10px !important;
+}
+.error{
+    color: rgb(192, 9, 9);
+    font-weight: 600;
+    text-align: center;
 }

@@ -2,7 +2,7 @@
 import Link from 'next/link'; 
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import LazyLoad from 'react-lazy-load';
+
 
 class Faqs extends Component {
 

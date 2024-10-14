@@ -13,7 +13,7 @@ const Footer = (props) => {
        <Container>
           <Row>
             <Col md={6}>
-               <Image src={"/img/logo2.png"}  width={200} height={56} alt="fast track visa"/>
+               <Image src={"/img/logo.webp"}  width={200} height={56} alt="fast track visa"/>
                <Row className="my-4">
                    <Col sm={6}>
                    <h5>UAE Office</h5>
@@ -22,17 +22,17 @@ const Footer = (props) => {
                     Sharjah, United Arab Emirates, 52101</p>
                     <ul className="slink_ul">
                   <li className="slink_li">
-                    <a className="slink" target="_blank" href=" https://www.facebook.com/photo?fbid=122103359720399926&set=a.122103360068399926" rel="nofollow"><FaFacebookF/></a>
+                    <a className="slink" target="_blank" aria-label="facebook" href=" https://www.facebook.com/photo?fbid=122103359720399926&set=a.122103360068399926" rel="nofollow"><FaFacebookF/></a>
                     </li>
                     <li className="slink_li">
-                      <a className="slink" target="_blank" href=" https://x.com/FTVisaServices/status/1810946778587451417" rel="nofollow"><FaTwitter /></a>
+                      <a className="slink" target="_blank"  aria-label="facebook" href=" https://x.com/FTVisaServices/status/1810946778587451417" rel="nofollow"><FaTwitter /></a>
                       </li>
                     <li className="slink_li">
-                      <a className="slink" target="_blank" href="https://www.linkedin.com/company/fasttrack-visa-com" rel="nofollow"><FaLinkedinIn /></a>
+                      <a className="slink" target="_blank"  aria-label="linkedinIn" href="https://www.linkedin.com/company/fasttrack-visa-com" rel="nofollow"><FaLinkedinIn /></a>
                     </li>
-                    <li className="slink_li"><a className="slink" target="_blank" href="https://www.instagram.com/p/C9PA0YOJiRl/"><FaInstagram /></a>
+                    <li className="slink_li"><a className="slink"  aria-label="instagram" target="_blank" href="https://www.instagram.com/p/C9PA0YOJiRl/"><FaInstagram /></a>
                     </li>
-                    <li className="slink_li"><a className="slink" target="_blank" href="https://www.youtube.com/channel/UCUYzoyrZZ7MSEYYwu2P6-6g"><FaYoutube /></a>
+                    <li className="slink_li"><a className="slink"   aria-label="youtube" target="_blank" href="https://www.youtube.com/channel/UCUYzoyrZZ7MSEYYwu2P6-6g"><FaYoutube /></a>
                     </li>
                   </ul>
                    </Col>
@@ -41,8 +41,8 @@ const Footer = (props) => {
                   <p>Suite 80
                     55 West 39th Street
                     New York, USA, 10018</p>
-                  <a href='mailto:info@fasttrackvisa.com'>info@fasttrackvisa.com</a>
-                  <p className="phoneNumber"><span>Phone No:</span> <span> 097116 10418 </span></p>
+                  <a href='mailto:info@fasttrackvisa.com'>info@fasttrackvisa.com</a>                
+                  <p className="phoneNumber"><span>Phone No:</span> <span><a href="tel:097116 10418"> 097116 10418 </a></span></p>
                   <Image alt="card_image" src={'/img/card_image.png'} width={150} height={31} />
                    </Col>
                </Row>

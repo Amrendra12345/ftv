@@ -6,9 +6,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'next/image'
-import LazyLoad from 'react-lazy-load';
-// import Nav from '../../../components/Nav'
-// import Footer from '../../../components/Footer'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ReactHtmlParser from 'react-html-parser';
@@ -51,7 +48,7 @@ class Successpagein extends Component {
     const page_url = context.query.success_inid;
     const success_page_url = context.query.success_inpage;
     const payment_id = context.query.payment_intent;
-    const res = await fetch(`https://cms.fasttrackvisa.com/api/${c_id}/thankyou/${page_url}/${success_page_url}`);
+    const res = await fetch(`http://localhost:3000/api/${c_id}/thankyou/${page_url}/${success_page_url}`);
 
     if (res.status === 200) {
       const thankupage = await res.json()
@@ -542,28 +539,6 @@ Loading...
                    </a> 
                 </p>
               </div>
-
-              {/* 
-              <Row className='mt-5'>
-
-                <Col sm={12} md={12}>
-                  <div className='card'>
-                    <div className='card-header bg-white'>
-
-
-                      <h5>Instructions to Activate and Use the eSIM Card:</h5>
-
-                    </div>
-                    <div className='card-body'>
-                      {ReactHtmlParser(this.props.thankupage.gernal_rule)}
-                    </div>
-
-                  </div>
-                </Col>
-
-
-              </Row> */}
-
 
               <h5 className='mt-5'> Thank you for providing additional details for your eVisa Application.  Please note :
               </h5>

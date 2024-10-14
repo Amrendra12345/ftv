@@ -8,14 +8,14 @@ const Searchband = (props) => {
    const [originValue, setOriginValue] = useState('');
    const [extention, setExtention] = useState('')
    const [show, setShow] =useState(false)
-   const [open, setOpen] =useState(false)
+   const [open, setOpen] =useState(false) 
 
    const[destination, setDestination] = useState([])
    const[destinationValue, setDestinationValue] = useState('')
      
 
       const clickCitize = async()=>{
-          const res = await fetch(`https://cms.fasttrackvisa.com/api/${props.ce_name}/origin-country`)
+          const res = await fetch(`https://cms.fasttrackvisa.com/api/${props.ce_name}/origin-country`);
           const data = await res.json();
           setOrigin(data.origin_country)
           setShow(true)
@@ -52,7 +52,7 @@ const Searchband = (props) => {
       if(e.target.value == "Not available destination country"){
          setOpen(false)
       }else{
-      const conunty =  JSON.parse(localStorage.getItem("destination_country"));      
+      const conunty =  JSON.parse(localStorage.getItem("destination_country"));
       setDestination(conunty)
       setOpen(true)   
       } 
@@ -73,7 +73,7 @@ const Searchband = (props) => {
          router.push(newLink, newLink, { locale: extention })
 
       }
-   }
+   }  
   return (
     <section className="searchband">
        <Container>

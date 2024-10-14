@@ -18,6 +18,7 @@ export default function MyApp({ Component, pageProps :{ session, ...pageProps }}
     return (
       <>
        <Head>
+       
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/img/favicon.ico" />
@@ -31,6 +32,10 @@ export default function MyApp({ Component, pageProps :{ session, ...pageProps }}
         <meta name="checkout" content="https://fasttrackvisa.com/en-in/checkout/cambodia-business-e-visa/16?cnp=FTVNY"/>
         
         <meta name="google-site-verification" content="L0_50ckD83y8UrprubZ2rY3vo-2RucflVhKVAi_qSrg" />
+        
+      <noscript dangerouslySetInnerHTML={{
+        __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSNXH65"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>` }}></noscript>
        </Head>
       <SessionProvider session={session}>
       <Layout>

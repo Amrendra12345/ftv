@@ -1,4 +1,4 @@
-const baseUrl = 'https://fasttrackvisa';
+const baseUrl = 'https://fasttrackvisa.com';
 import Curr_list from '../countyExList_in.json';
 
 

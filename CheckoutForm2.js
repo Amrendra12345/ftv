@@ -106,7 +106,7 @@ export default function CheckoutForm(props) {
         options={{ defaultValues: { email: userInfo } }}
         value={email}
         onChange={(event) => {
-         // console.log(event)
+          console.log(event)
           setEmail(event.value.email);
         }}
       />
@@ -120,5 +120,4 @@ export default function CheckoutForm(props) {
       {message && <div id="payment-message">{message}</div>}
     </form>
   )
-
 }

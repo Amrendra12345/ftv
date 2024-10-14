@@ -209,7 +209,7 @@ const Navbar = (props) => {
               <span className='d-md-none' onClick={toggleMenu}><FaBars/></span>
               <Link href={'/'}>
                 <div className='logo_img'>
-                 <Image sizes="(min-width: 750px) 20vw, 30vw" priority alt="Fast Track Visa" src={'/img/logo.webp'} fill  />
+                 <Image sizes="(min-width: 750px) 20vw, 30vw" priority="false" alt="Fast Track Visa" src={'/img/logo.webp'} fill  />
                  </div>
               </Link>
               </div>
