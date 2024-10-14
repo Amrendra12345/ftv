@@ -59,13 +59,11 @@ export async function getServerSideProps(ctx){
       }
     } 
    }
-   const homeList = await fetch(`${process.env.BASE_URL}/api/${country_ext}/homelisting`);
-  
+   const homeList = await fetch(`${process.env.BASE_URL}/api/${country_ext}/homelisting`);  
    if(!homeList.ok){
     throw new Error('Failed to homelist data')
    }
    const homeData = await homeList.json()
-
    return{
     props: {ce_name, homeData}
    }
