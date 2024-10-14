@@ -46,7 +46,9 @@ export async function getServerSideProps(ctx){
   const country_ext = ctx.locale;
   const res = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=0303334790d54efdb7a07b113b206ced`)
   if (!res.ok){
-    throw new Error('Failed to fetch data')
+    return{
+      notFound: true,
+    }
   }
   const data = await res.json() 
    if(data !== null){ 
@@ -59,11 +61,15 @@ export async function getServerSideProps(ctx){
       }
     } 
    }
-   const homeList = await fetch(`${process.env.BASE_URL}/api/${country_ext}/homelisting`);  
-   if(!homeList.ok){
-    throw new Error('Failed to homelist data')
+   const homeList = await fetch(`${process.env.BASE_URL}/api/${country_ext}/homelisting`);
+  
+   if(!homeList.ok || homeList.length === 0){
+    return{
+      notFound: true,
+    }
    }
    const homeData = await homeList.json()
+
    return{
     props: {ce_name, homeData}
    }
