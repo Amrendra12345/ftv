@@ -61,7 +61,7 @@ export default function Blog_page(props) {
                            blog_arr.title == "What are the different types of Indian visas"? '/blog/What are the different types of Indian visas.webp':
                            blog_arr.title == "What are the most common mistakes while Travelling"? '/blog/What are the most common mistakes while Travelling.webp':
                            blog_arr.title == "What are the perks of having Evisa"? '/blog/What are the perks of having Evisa.webp':
-                          blog_arr.title == "What countries are visa-free to India?"? '/public/blog/what countries are visa free to India.webp':
+                          blog_arr.title == "What countries are visa-free to India?"? '/blog/what countries are visa free to India.webp':
 
                           blog_arr.title == "Business Visa for Australian Citizens to India"? '/blog/Business Visa for Australian Citizens to India.webp':
                           blog_arr.title == "CAN I GET AN AUSTRALIA VISA EXTENSION?"? '/blog/CAN I GET AN AUSTRALIA VISA EXTENSION.webp':
