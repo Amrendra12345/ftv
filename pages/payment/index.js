@@ -33,7 +33,7 @@ const Payment = (props) => {
   };
   // {sessionStorage.getItem('currency') + sessionStorage.getItem('finalAmount')}
   return (
-    <Modal size="lg" dialogClassName="" show={show} animation={true} backdrop="static" keyboard={false}>
+    <Modal size="lg" dialogClassName="" show={show} animation={true} backdrop="static" keyboard={false} style={{marginTop:'5%'}}>
     <Modal.Header>
       <Modal.Title>Total Amount: {props?.paymentData?.currency + ' ' + props?.paymentData?.visaPrice}</Modal.Title>
       <span className="close2" onClick={() => { props.handleCallback(false) }}>
