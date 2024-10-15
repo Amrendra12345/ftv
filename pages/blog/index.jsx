@@ -45,7 +45,7 @@ export default function Blog_page(props) {
                         alt={blog_arr.title}
                        
                          src={
-                           blog_arr.title == "Beyond the Tourist Traps: A Generic Guide to Experiencing Real Culture while Traveling" ? '/blog/Beyond the Tourist Traps A Generic Guide to Experiencing Real Culture while Traveling.webp' :
+                           blog_arr.title == "Beyond the Tourist Traps: A Generic Guide to Experiencing Real Culture while Traveling" ? '/blog2/Beyond the Tourist Traps A Generic Guide to Experiencing Real Culture while Traveling.webp' :
                            blog_arr.title == "Crafting a Uniquely Luxurious Travel Experience." ? '/blog/Crafting a Uniquely Luxurious Travel Experience.webp' :
                           blog_arr.title == "From Backpacks to Briefcases: A Generic Travel Guide for the Modern Nomad" ? '/blog/From Backpacks to Briefcases.webp':
                            blog_arr.title == "How do you apply for an India visa?"? '/blog/How do you apply for an India visa.webp':
