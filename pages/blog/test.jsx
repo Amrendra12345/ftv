@@ -4,12 +4,8 @@ const test = () => {
     return (
         <div>
             <p>Winter Wonderland Wanderlust: Your Ultimate Travel Essentials Guide</p>
-
-
-
             <p> E-Business Visa India Validity</p>
             <p> E-Business Visa and Indian Invitation Letter</p>
-
             <p> What countries are visa-free to India?</p>
 
 
@@ -31,7 +27,7 @@ const test = () => {
             <p> Indian Visa for Chinese citizens - Everything you need to know</p>
             <p>  India Visa for Malaysians, All You need to know</p>
             <p> INDIA VISA FOR SOUTH AFRICAN PASSPORT HOLDERS</p>
-            <p> INDIA'S ELECTRONIC VISA AND ITS DIFFERENT ASPECTS</p>
+            <p> </p>
             <p> India visa for Sri Lankan citizens</p>
             <p> Indian Visa for UK Citizens: Fee, Requirements & More</p>
             <p> India eVisa for Canadian Citizens: Requirements, Costs, and More</p>
@@ -50,18 +46,18 @@ const test = () => {
             <p> India Visa for Malaysians, All You need to know</p>
             <p> Indian Visa for Chinese citizens - Everything you need to know</p>
             <p> Attending Special Events and Festivals Around the World.</p>
-            <p> From Backpacks to Briefcases: A Generic Travel Guide for the Modern Noma</p>
-            <p> Travel Like a Pro: The Ultimate Generic Guide for Exploring the World</p>
+            <p> </p>
+            <p> </p>
             <p> Experiencing Luxury Travel on a Different Continent</p>
-            <p>  The Ultimate Bucket List: A Generic Travel Guide to Crossing Off Your Dream Destinations</p>
-            <p>Escape the Ordinary: A Generic Travel Guide to Finding Your Next Adventure</p>
-            <p> Travel Smarter, Not Harder: A Generic Guide to Planning and Executing the Perfect Trip</p>
+            <p> </p>
+            <p></p>
+            <p> </p>
             <p> 15 Things You Need to Know Before Visiting Thailand</p>
-            <p> Top 15 Unforgettable Hikes Around the World</p>
+            <p> </p>
             <p> Australia Travel Guide (2023) | Top 15 Places to Visit in Australia</p>
-            <p> The Road Less Traveled: A Generic Guide to Finding Unique Experiences while on the Road</p>
-            <p> New Zealand Travel Guide (2023) | Top 15 Places to Visit in New Zeland</p>
-            <p> Turkey Travel Guide (2023) | Top 15 Places to Visit in Turkey</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> Wanderlust on a Budget: A Generic Travel Guide to Saving Money and Seeing the World</p>
             <p> Morocco Travel Guide| Top 15 Places to Visit in Morocco</p>
             <p> 15 Best Road Trips in the World</p>

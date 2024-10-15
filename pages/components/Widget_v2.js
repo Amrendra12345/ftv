@@ -1,129 +1,226 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Select from "react-select";
-import Router from "next/router";
-import { Card, Form } from 'react-bootstrap';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import React, { use, useEffect, useRef, useState } from 'react'
+import { Col, Container, Row } from "react-bootstrap";
+import style from '@/styles/widget_forms.module.scss'
+
 
 const Widget_v = (props) => {
-  // let origin_country = [];
+     const router = useRouter()
+    const [originInputValue, setOriginInputValue] = useState('');
+    const [originCountry, setOriginCountry] = useState([]);
+    const [filterOrigin, setFilterOrigin] = useState([]);
+    const [isOpen, setIsOpen] = useState(false)    
+    const [isActive, setIsActive] = useState(false)
+    const originRef = useRef();   
+    const destinationRef = useRef(); 
+    const [ destination, setDestionation] = useState([]);
+    const [ filterDestination, setFilterDestination] = useState([]);
+    const [desInputValue, setDesInputValue] = useState('')
+    const [originCountryKey, setOriginCountryKey] = useState('')
+    const [isError, setIsError] = useState(null);
+    const originClickHandler = async()=>{        
+      const res = await fetch(`https://cms.fasttrackvisa.com/api/${props.ce_name}/origin-country`);
+      if(!res.ok){
+          setError('No country')
+      }
+      const data = await res.json(); 
+      console.log(data)
+      setOriginCountry(data.origin_country)
+      setFilterOrigin(data.origin_country)
+      setIsOpen(true)
+  }
+  const originChangekHandler = (e) =>{
+      const val = e.target.value      
+      setOriginInputValue(val)
+       if(val !== ''){
+          const filterData = originCountry.filter((el, index)=>{
+              if(el.name.toLowerCase().startsWith(val)){
+                  currentIndex = val.length
+                  return el.name.toLowerCase().startsWith(val)
+              }else{
+                  return el.name.toLowerCase().startsWith(val.substring(0, currentIndex))
+              }
+          })
+          setFilterOrigin(filterData)
+      }else{
+      setFilterOrigin(originCountry)
+      }
+  }
+  
+ const selectedOriginCountry = async(e)=>{
+      const country =  e.target.innerText 
+      const countryKey = e.target.getAttribute('label');
+      setOriginInputValue(country);
+      setOriginCountryKey(countryKey)
+      setIsOpen(false);
+      
+      // destionation country start
 
-  // const [originOption, setOriginOption] = useState([]);
-  // const [origin, setOrigin] = useState();
-  // const [originv, setOriginv] = useState();
-  // const [destinationOption, setDestinationOption] = useState([]);
-  // const [destination, setDestination] = useState("");
-  const [textShow, setTextShow ] = useState(false);
-  const [sources, setSources] = useState([]);
-  const [searchVal, setSearchVal] = useState("");
-  const [sourceName, setSourceName] = useState('Select...');
-  const [sourceNameExt, setSourceNameExt] = useState('');
-  const [toggleSource, settoggleSource] = useState(false);
-  const [visitCountries, setVisitCountries] = useState([]);
-  const [openToggle, setOpenToggle ] = useState(false);
-  const [aimPlaceholder, setAimPlaceholder] = useState('Select...')
-  const [aimData, setAimData] = useState('');
-
-  const clickOriginCountry = async()=>{
-   
+      try {
+          const res = await fetch(`https://cms.fasttrackvisa.com/api/${props.ce_name}/origin-country/${country}`)
+          if(!res.ok){
+              throw new error
+          }
+          const data = await res.json();
+           if(data.destination_country.length > 1){
+              setIsError('')
+              setDesInputValue('')
+              setDestionation(data.destination_country);
+              setFilterDestination(data.destination_country)
+           }else{
+              setDesInputValue('')
+              setIsError('Not available destination country')
+              setTimeout(() => {
+                  setIsError("");
+                }, 3000);
+           }
+          
+      } catch (error) {
+          console.log(error.message)
+      }
+ }
+  // destionation country start
+const desClickHandler = ()=>{
+  setIsActive(true)
 }
-
-const setOriginOnClick = async(e)=>{ 
+const desChangeHandler = (e)=>{
+  const inputVal = e.target.value
+  setDesInputValue(inputVal)
+  if(inputVal !== ''){
+      const filterData = destination.filter((el, index)=>{
+          if(el.name.toLowerCase().startsWith(inputVal)){
+              desCurrentIndex = inputVal.length
+              return el.name.toLowerCase().startsWith(inputVal)
+          }else{
+              return el.name.toLowerCase().startsWith(inputVal.substring(0, desCurrentIndex))
+          }
+      })
+      setFilterDestination(filterData)
+  }else{
+      setFilterDestination(destination)
+  }
   
 }
-
-const sourceInputClick = async()=>{
+const desCountryClick = async(e)=>{
+  const country =  e.target.innerText 
+  setDesInputValue(country)
+  setIsActive(false)
   
 }
-const handleSelect = ()=>{
+const originDowpdon = (event)=>{
+if(originRef && originRef.current && originRef.current.contains(event.target)){
+   console.log('inside click')
+}else{
+  setIsOpen(false)
 }
-const handleSelectAim = ()=>{}
-const handleSourceName = async(e)=>{
-    }
-  
-  
- 
-
-const visitInputClick = ()=>{
- 
-}
-const handleVisitClick = (e)=>{
- 
 }
 
-const GetEvisa = ()=>{
+const destinationDowpdon = (event)=>{
+  if(destinationRef && destinationRef.current && destinationRef.current.contains(event.target)){
+     console.log('inside click')
+  }else{
+      setIsActive(false)
+  }
+}
+useEffect(()=>{
+  document.addEventListener('click', originDowpdon)
+  return ()=>{
+      document.removeEventListener('click', originDowpdon)
+  }
+},[])
+useEffect(()=>{
+  document.addEventListener('click', destinationDowpdon)
+  return ()=>{
+      document.removeEventListener('click', destinationDowpdon)
+  }
+},[])
 
+
+const GetEvisa = async() =>{
+  const destination = desInputValue;
+  const extention = originCountryKey    
+  setIsError('')
+  if(originInputValue.length < 1){
+      setIsError('Please select your origin country')
+      setTimeout(() => {
+          setIsError("");
+        }, 3000);
+      return false;
+  }else if(desInputValue.length < 1){
+      setIsError('Please select your destination country')
+      setTimeout(() => {
+          setIsError("");
+        }, 3000);
+      return false;    
+  }else{
+      getErrorStatus(extention, destination)
+  }
+
+}
+const getErrorStatus = async(ext, conunty)=>{   
+  axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/${ext}/international-visa/${conunty}`)
+  .then(function(){ 
+      router.push(conunty, conunty, { locale: ext })
+  })
+     .catch(function (error) {        
+        if (error.response) {
+          setIsError('Not available this country visa')
+          setTimeout(() => {
+              setIsError("");
+            }, 3000);
+        }
+ })
 }
 
   return (
-    <div className="widget_750 widgetform">
-      <h4>
-        Fly Anywhere.
-        <br />
-        Get an eVisa
-      </h4>
-      <form>
-        <div className="ftv-field">
-          <div className="citizenField">
-            {textShow && <p> Lang is not available default set lang "en-in"</p>}
-            <Form.Label htmlFor="input1">I am a citizen of</Form.Label>
-            <Form.Control
-              type="text"
-              value={sourceName || ""}
-              placeholder="Select.."
-              onChange={handleSelect}
-              onClick={sourceInputClick}
-            />
-
-            {toggleSource && Array.isArray(sources) ? (
-              <ul>
-                {sources.map((source) => {
-                  return (
-                    <li
-                      key={source.extention}
-                      data-ext={source.extention}
-                      onClick={(e) => handleSourceName(e)}
-                    >
-                      {source.name}
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-        <div className="ftv-field">
-          <div className="citizenField">
-            <Form.Label htmlFor="input2">Planning to visit</Form.Label>
-            <Form.Control
-              placeholder={aimPlaceholder}
-              type="text"
-              value={aimData || ""}
-              onChange={handleSelectAim}
-              onClick={visitInputClick}
-            />
-            {openToggle && Array.isArray(visitCountries) ? (
-              <ul>
-                {visitCountries.map((visit, index) => {
-                  return (
-                    <li key={index} onClick={(e) => handleVisitClick(e)}>
-                      {visit.name}
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-
-        <button type="button" className="btn btn-lg btn2" onClick={GetEvisa}>
-          Get an eVisa
-        </button>
-      </form>
-    </div>
+    <>
+    <Container className='pt-5'>
+       <Row>
+           <Col className="text-center">
+             { isError && <p className='error pl-5'>{isError}</p>}
+           </Col>
+       </Row>
+       <Row>
+          <Col md={{ span: 10, offset: 1 }} sm={12} >
+            <div className={style.widget_forms}>              
+              <h4>Fly Anywhere.<br />
+                <span> Get an eVisa </span> </h4>
+                <form>
+                   <div className='position-relative'>
+                      <div className={style.ftv_field}>
+                        <label htmlFor="sourcLabel">I am a citizen of</label>
+                        <input type='text' className='form-control'value={originInputValue || ''} placeholder="Select..." onClick={originClickHandler}  onChange={originChangekHandler} />
+                    </div>
+                     <ul className={`${style.country_list}  ${isOpen === true ? 'show':'hidden'}`}  ref={originRef}>
+                        {
+                            filterOrigin.map((country)=>{
+                                return <li  label={country.extention} key={country.extention} onClick={selectedOriginCountry}>{country.name}</li>
+                            })
+                        }
+                      </ul>
+                   </div>
+                   <div className='position-relative' ref={destinationRef}>
+                   <div className={style.ftv_field}>
+                      <label htmlFor="">I am a citizen of</label>
+                      <input type="text" className="form-control" value={desInputValue || ''} placeholder="Select..." onClick={desClickHandler} onChange={desChangeHandler}/>
+                      </div>
+                        <ul className={`${style.country_list} ${isActive === true  ? 'show':'hidden'}`}>
+                          {
+                              filterDestination.map((des, i)=>{
+                                  return <li  key={i} onClick={desCountryClick} >{des.name}</li>
+                              })
+                          }
+                        </ul>
+                   </div>
+                   <button type='button' className={` btn btn-lg btn2 ${style.btn_lg}`} onClick={GetEvisa}>Get an eVisa</button>
+                </form>
+            </div>
+          </Col>
+       </Row>
+    </Container>
+     
+    </>
   );
 };
 

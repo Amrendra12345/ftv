@@ -89,8 +89,27 @@ export default function Blog_page(props) {
                           blog_arr.title == "Indian Visa for UK Citizens Fee, Requirements & More"? '/blog/Indian Visa for UK Citizens Fee, Requirements & More.webp':
                           blog_arr.title == "INDIA'S ELECTRONIC VISA AND ITS DIFFERENT ASPECTS"? '/blog/INDIAS ELECTRONIC VISA AND ITS DIFFERENT ASPECTS.webp':
                           blog_arr.title == "India eVisa for Canadian Citizens: Requirements, Costs, and More"? '/blog/India eVisa for Canadian Citizens Requirements, Costs, and More.webp':
+
+                          blog_arr.title == "15 Things You Need to Know Before Visiting Thailand"? '/blog/15 Things You Need to Know Before Visiting Thailand.webp':
+                          blog_arr.title == "Attending Special Events and Festivals Around the World."? '/blog/Attending Special Events and Festivals Around the World.webp':
+                          blog_arr.title == "Australia Travel Guide (2023) | Top 15 Places to Visit in Australia"? '/public/blog2/Australia Travel Guide (2023)  Top 15 Places to Visit in Australia.webp':
+                          blog_arr.title == "Experiencing Luxury Travel on a Different Continent"? '/blog/Experiencing Luxury Travel on a Different Continent.webp':
+                          blog_arr.title == "Top 15 Unforgettable Hikes Around the World"? '/blog/Top 15 Unforgettable Hikes Around the World.webp':
+
+                          blog_arr.title == "Turkey Travel Guide (2023) | Top 15 Places to Visit in Turkey"? '/blog/Turkey Travel Guide (2023)  Top 15 Places to Visit in Turkey.webp':
+                          blog_arr.title == "Travel Smarter, Not Harder: A Generic Guide to Planning and Executing the Perfect Trip"? '/blog/Travel Smarter, Not Harder A Generic Guide to Planning and Executing the Perfect Trip.webp':
+                          blog_arr.title == "Travel Like a Pro: The Ultimate Generic Guide for Exploring the World"? '/blog/Travel Like a Pro The Ultimate Generic Guide for Exploring the World.webp':
+                          blog_arr.title == " The Ultimate Bucket List: A Generic Travel Guide to Crossing Off Your Dream Destinations"? '/blog/The Ultimate Bucket List A Generic Travel Guide to Crossing Off Your Dream Destinations.webp':
+
+                          blog_arr.title == "The Road Less Traveled: A Generic Guide to Finding Unique Experiences while on the Road"? '/blog/The Road Less Traveled A Generic Guide to Finding Unique Experiences while on the Road.webp':
+                          blog_arr.title == "New Zealand Travel Guide (2023) | Top 15 Places to Visit in New Zeland"? '/blog/New Zealand Travel Guide (2023)  Top 15 Places to Visit in New Zeland.webp':
+                          blog_arr.title == "INDIA'S ELECTRONIC VISA AND ITS DIFFERENT ASPECTS"? '/blog2/INDIA_S ELECTRONIC VISA AND ITS DIFFERENT ASPECTS (2).webp':
+                          blog_arr.title == "From Backpacks to Briefcases: A Generic Travel Guide for the Modern Noma"? '/blog/From Backpacks to Briefcases A Generic Travel Guide for the Modern Nomad.webp':
+                          blog_arr.title == "Escape the Ordinary: A Generic Travel Guide to Finding Your Next Adventure"? '/blog/Escape the Ordinary A Generic Travel Guide to Finding Your Next Adventure.webp':
+                          
                          
-                          '/img/abrand-1.jpg' }
+                         
+                          '/blog2/default_blog.webp' }
                         sizes="(max-width:750px) 50vw, 20wv"
                         fill style={{
                           objectFit: 'cover', // cover, contain, none

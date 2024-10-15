@@ -44,7 +44,11 @@ export default function BlogSection(props) {
                   <figure>
                     <Image
                       alt={'blog user'}
-                      src={'/img/blog1.png'}
+                      src={
+                        blog_arr.title == "Beyond the Tourist Traps: A Generic Guide to Experiencing Real Culture while Traveling" ? '/blog2/Beyond the Tourist Traps A Generic Guide to Experiencing Real Culture while Traveling.webp' : 
+                        blog_arr.title == "From Backpacks to Briefcases: A Generic Travel Guide for the Modern Nomad" ? '/blog/From Backpacks to Briefcases.webp':
+                        '/blog2/default_blog.webp'
+                      }
                       // src={"https://ik.imagekit.io/vs4gypuhi/" + blog_arr.image}
                       fill
                       sizes='(max-width: 768px) 50vw, 30vw'
