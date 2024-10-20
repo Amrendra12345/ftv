@@ -199,7 +199,7 @@ const Navbar = (props) => {
  const toggleMenu = ()=>{
   setIsActive(current => !current);
  }
-
+ 
   return (
     <>
       <header className={`${inter.className } ${stickyClass}`}>

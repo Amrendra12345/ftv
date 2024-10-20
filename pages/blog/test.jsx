@@ -3,9 +3,9 @@ import React from 'react'
 const test = () => {
     return (
         <div>
-            <p>Winter Wonderland Wanderlust: Your Ultimate Travel Essentials Guide</p>
-            <p> E-Business Visa India Validity</p>
-            <p> E-Business Visa and Indian Invitation Letter</p>
+            <p></p>
+            <p> </p>
+            <p></p>
             <p> What countries are visa-free to India?</p>
 
 
@@ -20,7 +20,7 @@ const test = () => {
             <p> How to apply for Online Visa in a few Steps?</p>
             <p> The Best Restaurants and Attractions at Luxury Destinations.</p>
             <p> Touring the World's Most Exclusive Yachts and Cruise Ships.</p>
-            <p> Indian business visa for UK citizens - requirements and cost</p>
+            <p> </p>
             <p> India business visa processing time and duration, fees, and costs</p>
             <p> Indian Business visa for US citizens</p>
             <p> India Visa for the citizens of Kenya</p>
@@ -29,20 +29,20 @@ const test = () => {
             <p> INDIA VISA FOR SOUTH AFRICAN PASSPORT HOLDERS</p>
             <p> </p>
             <p> India visa for Sri Lankan citizens</p>
-            <p> Indian Visa for UK Citizens: Fee, Requirements & More</p>
+            <p> </p>
             <p> India eVisa for Canadian Citizens: Requirements, Costs, and More</p>
             <p> Is India a safe destination for the British?</p>
             <p> INDIA VISA FOR SOUTH AFRICAN PASSPORT HOLDERS</p>
             <p> INDIA'S ELECTRONIC VISA AND ITS DIFFERENT ASPECTS</p>
-            <p> E-Business Visa For India and Important Documents Required</p>
+            <p> </p>
             <p> How much does an India visa cost?</p>
-            <p> What happens if you overstay your India visa: fines and penalties</p>
-            <p> All about the India visa for Indonesian nationals</p>
-            <p> AUSTRALIA TRANSIT VISA FEES</p>
-            <p> India Visa Guide: All You Need To Know</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> India business visa processing time and duration, fees, and costs</p>
             <p> Indian Business visa for US citizens</p>
-            <p>Indian business visa for UK citizens - requirements and cost</p>
+            <p></p>
             <p> India Visa for Malaysians, All You need to know</p>
             <p> Indian Visa for Chinese citizens - Everything you need to know</p>
             <p> Attending Special Events and Festivals Around the World.</p>
@@ -58,71 +58,70 @@ const test = () => {
             <p> </p>
             <p> </p>
             <p> </p>
-            <p> Wanderlust on a Budget: A Generic Travel Guide to Saving Money and Seeing the World</p>
-            <p> Morocco Travel Guide| Top 15 Places to Visit in Morocco</p>
-            <p> 15 Best Road Trips in the World</p>
-            <p> The Beginner's Bible: A Generic Travel Guide to Making the Most of Your Vacation</p>
-            <p> The benefits and drawbacks of e-visa systems compared to traditional visa processes</p>
-            <p> Qatar Travel Guide (2023) | Top 15 Places to Visit in Qatar</p>
-            <p> A complete guide to New Zealand ETA</p>
-            <p> Best Hiking spots in Australia, know everything</p>
-            <p> A complete guide to Australian ETA</p>
-            <p> Top 15 destinations to visit this summer</p>
-            <p> Top 20 Budget Honeymoon Destinations Outside India</p>
-            <p> 17 Reasons why your Visa Application can be rejected</p>
-            <p> 10 Most Affordable Places in Kenya for Honeymoon Couples</p>
-            <p> Top 12 destinations off the beaten path</p>
-            <p> A complete guide to Canada ETA (Arrive Can)</p>
-            <p> 10 benefits ot taking a travel insurance for Australia/ New Zealand</p>
-            <p> 25 Common Travel Mistakes to Avoid</p>
-            <p> How to plan a round-the-world trip?</p>
-            <p>A complete guide to USA (United States) ESTA</p>
-            <p> Packing list for a round-the-world trip</p>
-            <p> What is the difference between a Visa and an eVisa?</p>
-            <p> 12 Essential Packing Tips for Traveling with Only a Carry-On Suitcase</p>
-            <p> Top 10 Countries Who Provide on Arrival Visa</p>
-            <p> Best Romantic Destinations in the World for 2022</p>
-            <p> Best Holiday Destinations 2022</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p></p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> A complete guide to USA ESTA</p>
-            <p> Kenya Travel Guidelines and COVID-19 Restrictions</p>
+            <p> </p>
 
 
-            <p>    A Complete Guide to Armenia eVisa</p>
+            <p>    </p>
             <p> A Complete Guide to Singapore eVisa</p>
-            <p> A Complete Guide to Qatar eVisa</p>
-            <p> A Complete Guide to Bahrain eVisa</p>
-            <p> A Complete Guide to Georgia eVisa</p>
-            <p> A Complete Guide to India eVisa</p>
-            <p> A Complete Guide to Sri Lanka Evisa</p>
-            <p> A Complete Guide to the United Arab Emirates (UAE) eVisa</p>
-            <p> A complete guide to Madagascar eVisa</p>
-            <p> Find out about Vietnamese food history</p>
-            <p> A Complete Guide to Azerbaijan eVisa</p>
-            <p> A Complete Guide to Djibouti Evisa</p>
-            <p> Visit the world’s highest 360-degree Infinity pool</p>
-            <p> A Complete Guide to Vietnam Evisa</p>
-            <p> Vaccination requirements for Madagascar: What vaccines you need to enter the country</p>
-            <p> A Complete Guide to Kenya Evisa</p>
+            <p> </p>
+            <p> </p
+            <p> </p>
+            <p></p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> United Arab Emirates waits for you!</p>
-            <p> Things you would like to know while exploring the Pyramids & Sphinx of Egypt</p>
-            <p> The Famous Spiritual Sites in India</p>
-            <p> Latest Travel Guidelines for Passengers coming to India</p>
-            <p> Plan a visit to Victoria Falls, Zambia</p>
-            <p> Get to know Vietnam post Pandemic</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> A Complete Guide to Canada ETA</p>
-            <p> 25 Best Adventure Destinations in the USA</p>
-            <p> NEWS ABOUT TUNISIA ELECTRONIC VISA LAUNCH</p>
-            <p> A Guide to Mexico Tourist Card</p>
-            <p> Turkey Covid-19 Updates</p>
-            <p> News About South Africa Electronic Visa Launch</p>
-            <p> A complete guide to Turkey eVisa</p>
-            <p> A complete guide to Saudi Arabia eVisa</p>
-            <p> A complete guide to Tanzania eVisa</p>
-            <p> Cambodia E-Visa & Travel Restrictions</p>
-            <p> Travel Restrictions and Dubai E-Visa</p>
-            <p> COVID-19: Latest information about safe travel to Uganda</p>
-            <p> Enjoy the most while visiting Azerbaijan</p>
-            <p> Things you can’t miss if visiting Qatar</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> Tanzania- A Paradise of Wildlife Lovers</p>
             <p> Experience the thrilling Safari in Zambia</p>
             <p> If you are a US citizen, Madagascar is open for you</p>

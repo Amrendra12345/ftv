@@ -185,7 +185,7 @@ const Login = (props, { handleCallback }) => {
                                         <input id="signEmailinput" name="signEmailinput" type="email" className="form-control" ref={signUpInputEmail} placeholder="Here" />
                                     </div>
 
-                                    <button className="buy_btn w-100" id="form-submit-button" type="button" onClick={SingUp}>Submit</button>
+                                    <button className="buy_btn w-100" id="form-submit-button" type="button" onClick={login}>Submit</button>
 
                                 </form>
                                 <p className="mt-3 mb-1">

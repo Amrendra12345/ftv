@@ -3262,5 +3262,24 @@ ul.profile_ul li:last-child a {
         max-height: 180px
     }
 }
+.abc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
+    li{
+        width: 30px;
+        height: 30px;
+        border:1px solid #ddd;
+        border-radius: 2px;
+        &.active{
+            background-color: red;
+            color: #fff
+        }
+    }
+}
+
 @import 'header';
-@import 'myStyle'
+@import 'myStyle';
+@import 'search_country';

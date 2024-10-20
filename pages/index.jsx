@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import Banner from './components/home-page/Banner'
 import CountryExLists from '../countyExList'
-import Searchband from './components/home-page/Search_band'
 import HomeList from './components/home-page/HomeList'
 import Simple_step from './components/Simple_step'
 import { useRouter } from 'next/router'
 import Ready_get from './components/Ready_get'
-import Widget_v from './components/Widget_v2'
 import BlogSection from './components/home-page/Blog-Section'
 import Abrand from './components/Abrand'
 import Testimonials from './components/home-page/Testimonials'
-import SearchCountry from './components/home-page/searchCountry'
+import SearchCountry from './components/search-country'
+import { Col, Row } from 'react-bootstrap'
+
 export default  function Home(props) { 
   
   const {locale}= useRouter();
@@ -24,17 +24,31 @@ export default  function Home(props) {
      <meta name="description" content='Apply for tourist e-visas and visas globally online through Fast Track Visa. We offer the most enjoyable and reliable way to obtain your visas promptly, guaranteed.' />
      </Head>
       <>
-        <Banner pageTitle={'Apply for Global Visas and ETAs Online'}/>
-        <SearchCountry ce_name={locale}/>
-        {/* <Searchband  ce_name={locale} /> */}
+        <Banner pageTitle={'Apply for Global Visas and ETAs Online'}/>      
+        <div className='container mt-4'>
+         <Row>
+            <Col className='mt-5'>
+              <SearchCountry ce_name={locale} page_name='homePage'/>
+            </Col>
+         </Row>
+        </div>
         <HomeList homelists ={props.homeData.homelist}/>
         <Simple_step scountryname="Relevant" /> 
         <Abrand/>
         <Testimonials testimonialsData ={props.homeData.testimonial} />
         <Ready_get></Ready_get>
-        <BlogSection blogs={props.homeData.blog_arr}></BlogSection>        
-        <Widget_v ce_name={locale}></Widget_v> 
-     
+        <BlogSection blogs={props.homeData.blog_arr}></BlogSection>      
+        <div className='container mt-5'>
+          <Row>
+             <Col lg={{ span:10, offset: 1 }} sm={12}>
+                <div className='widget_content'>
+                    <h4>Fly Anywhere <br />
+                      <span> Get an eVisa </span> </h4>
+                      <SearchCountry ce_name={locale} page_name='homePage'/>
+                 </div>
+             </Col>
+          </Row>
+        </div>
       </>
     </>
   )
