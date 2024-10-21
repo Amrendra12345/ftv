@@ -46,8 +46,10 @@ export default function BlogSection(props) {
                       alt={'blog user'}
                       src={
                         blog_arr.title == "Beyond the Tourist Traps: A Generic Guide to Experiencing Real Culture while Traveling" ? '/blog2/Beyond the Tourist Traps A Generic Guide to Experiencing Real Culture while Traveling.webp' : 
+                        blog_arr.title == "Barcelona Unveiled: A Journey through Culture, Culinary Delights, and Captivating Landmarks"? '/blog/Barcelona Unveiled A Journey through Culture, Culinary Delights, and Captivating Landmarks.webp':
                         blog_arr.title == "From Backpacks to Briefcases: A Generic Travel Guide for the Modern Nomad" ? '/blog/From Backpacks to Briefcases.webp':
                         blog_arr.title == "Winter Wonderland Wanderlust: Your Ultimate Travel Essentials Guide"? '/blog/Winter Wonderland Wanderlust Your Ultimate Travel Essentials Guide.webp':
+                        blog_arr.title == "Discover the Enchantment of Bali - A Guide to the Island's Must-Visit Destinations"? '/blog/Discover the Enchantment of Bali A Guide to the Island_s Must-Visit Destinations.webp':
                         '/blog2/default_blog.webp'
                       }
                       // src={"https://ik.imagekit.io/vs4gypuhi/" + blog_arr.image}
