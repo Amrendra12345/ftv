@@ -45,11 +45,12 @@ export default function BlogSection(props) {
                     <Image
                       alt={'blog user'}
                       src={
-                        blog_arr.title == "Beyond the Tourist Traps: A Generic Guide to Experiencing Real Culture while Traveling" ? '/blog2/Beyond the Tourist Traps A Generic Guide to Experiencing Real Culture while Traveling.webp' : 
-                        blog_arr.title == "Barcelona Unveiled: A Journey through Culture, Culinary Delights, and Captivating Landmarks"? '/blog/Barcelona Unveiled A Journey through Culture, Culinary Delights, and Captivating Landmarks.webp':
-                        blog_arr.title == "From Backpacks to Briefcases: A Generic Travel Guide for the Modern Nomad" ? '/blog/From Backpacks to Briefcases.webp':
-                        blog_arr.title == "Winter Wonderland Wanderlust: Your Ultimate Travel Essentials Guide"? '/blog/Winter Wonderland Wanderlust Your Ultimate Travel Essentials Guide.webp':
-                        blog_arr.title == "Discover the Enchantment of Bali - A Guide to the Island's Must-Visit Destinations"? '/blog/Discover the Enchantment of Bali A Guide to the Island_s Must-Visit Destinations.webp':
+                        blog_arr.title == "Escape to Winter Bliss: Why Dubai is Your Ideal Getaway" ? '/blog3/Escape to Winter Bliss Why Dubai is Your Ideal Getaway.webp' : 
+                        blog_arr.title == "Discover the Wonders of Changi Airport: Your Ultimate Guide to Making the Most of Your Layover" ? '/blog3/Discover the Wonders of Changi Airport Your Ultimate Guide to Making the Most of Your Layover.webp' : 
+                         blog_arr.title == "Discover the Magic of Krabi: A Gateway to Paradise" ? '/blog3/Discover the Magic of Krabi.webp' : 
+                         blog_arr.title == "California's Winter Magic: Exploring the Golden State's Snowy Peaks and Sunny Shores" ? '/blog/Californias Winter Magic Exploring the Golden States Snowy Peaks and Sunny Shores.webp' : 
+                         blog_arr.title == "The Enchantment of Paris: Discovering Love in the City of Light" ? '/blog/The Enchantment of Paris Discovering Love in the City of Light.webp' : 
+                         
                         '/blog2/default_blog.webp'
                       }
                       // src={"https://ik.imagekit.io/vs4gypuhi/" + blog_arr.image}

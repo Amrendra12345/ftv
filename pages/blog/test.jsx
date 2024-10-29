@@ -122,29 +122,29 @@ const test = () => {
             <p> </p>
             <p> </p>
             <p> </p>
-            <p> Tanzania- A Paradise of Wildlife Lovers</p>
-            <p> Experience the thrilling Safari in Zambia</p>
-            <p> If you are a US citizen, Madagascar is open for you</p>
-            <p> Plan your trip to Egypt, the land of pyramids and ancient civilization</p>
-            <p> Sri Lanka Tourism</p>
-            <p> How to travel to a country where you don’t speak the language</p>
-            <p> Entry to Zambia</p>
-            <p> Kenya Tourism, Adventure and Wildlife</p>
-            <p> Touristic Recommendations for a Madagascar eVisa and Holiday</p>
-            <p> Things you need to know if travelling to Qatar for the FIFA World Cup 2022</p>
-            <p> Sri Lanka Complete Tour Guide</p>
-            <p> Complete Zambia Travel Guide</p>
-            <p> Vietnam has Removed COVID-19 Restrictions for International Passengers and is issuing eVisas again</p>
-            <p> The Tension Between Russia and Ukraine: Why is it?</p>
-            <p> A summary of the Russia-Ukraine conflict 2022</p>
-            <p> Dubai Evisa for Algerian Passport Holders</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
             <p> Dubai Visa for Moroccan Citizens</p>
-            <p> Top things to do in Dubai</p>
-            <p> Top 10 places to visit this summer in Kenya</p>
-            <p> Egypt is open for tourism</p>
-            <p> Top 10 destinations to visit this winter</p>
-            <p> Things You Need to Know While Applying for a New Zealand visa from Dubai</p>
-            <p> Top 10 things to visit in Australia</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p></p>
+            <p> </p>
             <p> Top 10 Destinations for Budget Travelers</p>
             <p> Rules And Regulations For EU Travel</p>
             <p> COVID-19 And The USA - What To Expect This November</p>

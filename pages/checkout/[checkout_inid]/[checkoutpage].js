@@ -22,6 +22,7 @@ import ReactHtmlParser from "react-html-parser";
 import { loadStripe } from "@stripe/stripe-js";
 import { data } from "jquery";
 import { Elements } from "@stripe/react-stripe-js";
+import Login from "@/pages/login/login";
 
 const base = "https://cms.fasttrackvisa.com";
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
@@ -47,6 +48,7 @@ class Checkoutpagein extends Component {
       discountAmount: 0,
       showSuccessMessage: false,
       isCouponValid: false,
+      count: 0
     };
   }
   onApply = async () => {
@@ -160,8 +162,20 @@ class Checkoutpagein extends Component {
       };
     }
   }
-
+  
   componentDidMount() {
+     const loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
+     console.log(loginDetails.email)
+     
+     if(loginDetails.email == '' || loginDetails.mobile_number == ''){
+          const reloadCount = sessionStorage.getItem('reloadCount');
+          if(reloadCount < 1) {
+            sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+            window.location.reload();
+          } else {
+            sessionStorage.removeItem('reloadCount');
+          }
+      }
     this.addFormFields();
     this.setState({
       p_origin: localStorage.getItem("origin"),
@@ -204,7 +218,7 @@ class Checkoutpagein extends Component {
     traveler_info[i][name] = e;
     this.setState({ traveler_info });
   };
-
+ 
   addFormFields = () => {
     if (localStorage.getItem("loginDetails") === null) {
       var loginDetails = {
@@ -970,7 +984,9 @@ class Checkoutpagein extends Component {
               </Col>
             </Row>
           </div>
+           
         </Container>
+
        
         {/* {console.log(this.state.clientSecret)}; */}
         {this.state.isContinueToPayment === true && this.state.clientSecret ? (

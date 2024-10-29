@@ -136,6 +136,7 @@ const Blog = () => {
                                                item.title == "17 Reasons why your Visa Application can be rejected"? '/blog/17 Reasons why your Visa Application can be rejected.webp':
                                                item.title == "25 Common Travel Mistakes to Avoid"? '/blog/25 Common Travel Mistakes to Avoid.webp':                         
                                                item.title == "A complete guide to Canada ETA (Arrive Can)"? '/blog/A complete guide to Canada ETA (Arrive Can).webp':
+                                               item.title == "A Complete Guide to Canada ETA"? '/blog/A complete guide to Canada ETA.webp':
                                                item.title == "All about the India visa for Indonesian nationals"? '/blog/All about the India visa for Indonesian nationals.webp':
                                                item.title == "AUSTRALIA TRANSIT VISA FEES"? '/blog/AUSTRALIA TRANSIT VISA FEES.webp':
                                                item.title == "E-Business Visa and Indian Invitation Letter"? '/blog/e-business-visa-and-indian-invitation-letter.webp':
@@ -209,6 +210,36 @@ const Blog = () => {
                                                item.title == "Visit the world’s highest 360-degree Infinity pool"? '/blog/visit-the-world’s-highest-360-degree-infinity-pool.webp':
                                                item.title == "Wanderlust on a Budget: A Generic Travel Guide to Saving Money and Seeing the World"? '/blog/Wanderlust on a Budget A Generic Travel Guide to Saving Money and Seeing the World.webp':
                                                item.title == "What is the difference between a Visa and an eVisa?"? '/blog/What is the difference between a Visa and an eVisa.webp':
+                                               item.title == "Escape to Winter Bliss: Why Dubai is Your Ideal Getaway" ? '/blog/Escape to Winter Bliss Why Dubai is Your Ideal Getaway.webp' : 
+                                                item.title == "Discover the Wonders of Changi Airport: Your Ultimate Guide to Making the Most of Your Layover" ? '/blog3/Discover the Wonders of Changi Airport Your Ultimate Guide to Making the Most of Your Layover.webp' : 
+                                                item.title == "Discover the Magic of Krabi: A Gateway to Paradise" ? '/blog/Discover the Magic of Krabi.webp' : 
+                                                item.title == "California's Winter Magic: Exploring the Golden State's Snowy Peaks and Sunny Shores" ? '/blog/Californias Winter Magic Exploring the Golden States Snowy Peaks and Sunny Shores.webp' : 
+                                                item.title == "The Enchantment of Paris: Discovering Love in the City of Light" ? '/blog/The Enchantment of Paris Discovering Love in the City of Light.webp' :
+
+                                                item.title == "A summary of the Russia-Ukraine conflict 2022" ? '/blog/a-summary-of-the-russia-ukraine-conflict-2022.webp' :
+                                                item.title == "Complete Zambia Travel Guide" ? '/blog/Complete Zambia Travel Guide.webp' :
+                                                item.title == "Dubai Visa for Moroccan Citizenst" ? '/blog/Dubai Visa for Moroccan Citizens.webp' :
+                                                item.title == "Dubai Evisa for Algerian Passport Holders" ? '/blog/dubai-evisa-for-algerian-passport-holders.webp' :
+                                                item.title == "Egypt is open for tourism" ? '/blog/Egypt is open for tourism.webp' :
+                                                item.title == "Entry to Zambia" ? '/blog/entry-to-zambia.webp' :
+                                                item.title == "Experience the thrilling Safari in Zambia" ? '/blog/Experience the thrilling Safari in Zambia.webp' :
+                                                item.title == "How to travel to a country where you don’t speak the language" ? '/blog/how-to-travel-to-a-country-where-you-don’t-speak-the-language.webp' :
+                                                item.title == "If you are a US citizen, Madagascar is open for you" ? '/blog/If you are a US citizen, Madagascar is open for you.webp' :
+                                                item.title == "Kenya Tourism, Adventure and Wildlife" ? '/blog/kenya-tourism,-adventure-and-wildlife.webp' :
+                                                item.title == "Plan your trip to Egypt, the land of pyramids and ancient civilization" ? '/blog/Plan your trip to Egypt, the land of pyramids and ancient civilization.webp' :
+                                                item.title == "Sri Lanka Tourism" ? '/blog/Sri Lanka Tourism.webp' :
+                                                item.title == "Sri Lanka Complete Tour Guide" ? '/blog/sri-lanka-complete-tour-guide.webp' :
+                                                item.title == "Tanzania- A Paradise of Wildlife Lovers" ? '/blog/tanzania--a-paradise-of-wildlife-lovers.webp' :
+                                                item.title == "The Tension Between Russia and Ukraine: Why is it?" ? '/blog/the-tension-between-russia-and-ukraine-why-is-it.webp' :
+                                                item.title == "Things you need to know if travelling to Qatar for the FIFA World Cup 2022" ? '/blog/Things you need to know if travelling to Qatar for the FIFA World Cup 2022.webp' :
+                                                item.title == "Things You Need to Know While Applying for a New Zealand visa from Dubai" ? '/blog/things-you-need-to-know-while-applying-for-a-new-zealand-visa-from-dubai.webp' :
+                                                item.title == "Top 10 destinations to visit this winter" ? '/blog/Top 10 destinations to visit this winter.webp' :
+                                                item.title == "Top things to do in Dubai" ? '/blog/Top things to do in Dubai.webp' :
+                                                item.title == "Top 10 places to visit this summer in Kenya" ? '/blog/top-10-places-to-visit-this-summer-in-kenya.webp' :
+                                                item.title == "Top 10 things to visit in Australia" ? '/blog/top-10-things-to-visit-in-australia.webp' :
+                                                item.title == "Touristic Recommendations for a Madagascar eVisa and Holiday" ? '/blog/touristic-recommendations-for-a-madagascar-evisa-and-holiday.webp' :
+                                                item.title == "Vietnam has Removed COVID-19 Restrictions for International Passengers and is issuing eVisas again" ? '/blog/vietnam-has-removed-covid-19-restrictions-for-international-passengers-and-is-issuing-evisas-again.webp' :
+                                                
                                               
 
                                                 '/blog2/default_blog.webp' }

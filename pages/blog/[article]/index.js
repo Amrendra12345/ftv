@@ -43,10 +43,10 @@ const Blog_page = (props) => {
                     <Row className='mt-5'>
                         <Col sm={1} md={1} lg={1} className='px-1'>
                             <div className='sharediv'> <p className='text-center'>Share</p>
-                                <p className='text-center'><a href='#' className='facekbook'><FaFacebookF/></a></p>
-                                <p className='text-center'><a href='#'className='twitter'><FaTwitter /></a></p>
-                                <p className='text-center'><a href='#'className='linkedin'><FaLinkedinIn /></a></p>
-                                <p className='text-center'><a href='#'className='instagram'><FaInstagram /></a></p>
+                                <p className='text-center'><a  target="_blank" aria-label="facebook" href="https://www.facebook.com/fasttrckvisa" rel="nofollow" className='facekbook'><FaFacebookF/></a></p>
+                                <p className='text-center'> <a className="twitter" target="_blank"  aria-label="facebook" href="https://x.com/FTVisaServices" rel="nofollow"><FaTwitter /></a></p>
+                                <p className='text-center'><a className="linkedin" target="_blank"  aria-label="linkedinIn" href="https://www.linkedin.com/company/fasttrack-visa-com" rel="nofollow"><FaLinkedinIn /></a></p>
+                                <p className='text-center'><a className="instagram"  aria-label="instagram" target="_blank" href="https://www.instagram.com/ftvisaservices/"><FaInstagram /></a></p>
                             </div>
                         </Col>                        
                         <Col sm={11} md={9} lg={9} className='px-1'>                        

@@ -120,8 +120,10 @@ const Navbar = (props) => {
   }, [session])
 
   const isCheckoutPage = (status) => {
+    
     if (userName === null || userName === undefined || userName === '') {
-      const url = pathname.split('/');      
+      const url = pathname.split('/'); 
+
       
       var checkOut = url.find(u => u == 'checkout' || u == 'my-profile' || u == 'success');       
       // console.log(userName,status, checkOut, (status && checkOut), (!status && !checkOut))

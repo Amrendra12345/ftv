@@ -229,7 +229,7 @@ axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/${ext}/international-visa/${c
         </div>
         <div className='destination_country' ref={destinationRef}>
            <div className="ftv-field">
-                <label htmlFor='desti'>I am a citizen of</label>
+                <label htmlFor='desti'>Planning to visit</label>
                 <input type="text" id="desti" className="form-control" value={desInputValue || ''} placeholder="Select..." onClick={desClickHandler} onChange={desChangeHandler}/>                
             </div>
             <ul className={`country_list ${isActive === true  ? 'show':'hidden'}`}>

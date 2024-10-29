@@ -22,15 +22,15 @@ const Footer = (props) => {
                     Sharjah, United Arab Emirates, 52101</p>
                     <ul className="slink_ul">
                   <li className="slink_li">
-                    <a className="slink" target="_blank" aria-label="facebook" href=" https://www.facebook.com/photo?fbid=122103359720399926&set=a.122103360068399926" rel="nofollow"><FaFacebookF/></a>
+                    <a className="slink" target="_blank" aria-label="facebook" href="https://www.facebook.com/fasttrckvisa" rel="nofollow"><FaFacebookF/></a>
                     </li>
                     <li className="slink_li">
-                      <a className="slink" target="_blank"  aria-label="facebook" href=" https://x.com/FTVisaServices/status/1810946778587451417" rel="nofollow"><FaTwitter /></a>
+                      <a className="slink" target="_blank"  aria-label="facebook" href="https://x.com/FTVisaServices" rel="nofollow"><FaTwitter /></a>
                       </li>
                     <li className="slink_li">
                       <a className="slink" target="_blank"  aria-label="linkedinIn" href="https://www.linkedin.com/company/fasttrack-visa-com" rel="nofollow"><FaLinkedinIn /></a>
                     </li>
-                    <li className="slink_li"><a className="slink"  aria-label="instagram" target="_blank" href="https://www.instagram.com/p/C9PA0YOJiRl/"><FaInstagram /></a>
+                    <li className="slink_li"><a className="slink"  aria-label="instagram" target="_blank" href="https://www.instagram.com/ftvisaservices/"><FaInstagram /></a>
                     </li>
                     <li className="slink_li"><a className="slink"   aria-label="youtube" target="_blank" href="https://www.youtube.com/channel/UCUYzoyrZZ7MSEYYwu2P6-6g"><FaYoutube /></a>
                     </li>
