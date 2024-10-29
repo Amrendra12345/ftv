@@ -45,7 +45,7 @@ export default function BlogSection(props) {
                     <Image
                       alt={'blog user'}
                       src={
-                        blog_arr.title == "Escape to Winter Bliss: Why Dubai is Your Ideal Getaway" ? '/blog3/Escape to Winter Bliss Why Dubai is Your Ideal Getaway.webp' : 
+                        blog_arr.title == "Escape to Winter Bliss: Why Dubai is Your Ideal Getaway" ? '/blog/Escape to Winter Bliss Why Dubai is Your Ideal Getaway.webp' : 
                         blog_arr.title == "Discover the Wonders of Changi Airport: Your Ultimate Guide to Making the Most of Your Layover" ? '/blog3/Discover the Wonders of Changi Airport Your Ultimate Guide to Making the Most of Your Layover.webp' : 
                          blog_arr.title == "Discover the Magic of Krabi: A Gateway to Paradise" ? '/blog3/Discover the Magic of Krabi.webp' : 
                          blog_arr.title == "California's Winter Magic: Exploring the Golden State's Snowy Peaks and Sunny Shores" ? '/blog/Californias Winter Magic Exploring the Golden States Snowy Peaks and Sunny Shores.webp' : 

@@ -165,7 +165,7 @@ class Checkoutpagein extends Component {
   
   componentDidMount() {
      const loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
-     console.log(loginDetails.email)
+    // console.log(loginDetails.email)
      
      if(loginDetails.email == '' || loginDetails.mobile_number == ''){
           const reloadCount = sessionStorage.getItem('reloadCount');
